@@ -19,7 +19,7 @@ type ThemeCategory = 'all' | 'warm' | 'cool' | 'neon' | 'pastel' | 'custom'
 export default function ThemeSwitcher() {
     const [isOpen, setIsOpen] = useState(false)
     const [isDark, setIsDark] = useState(true)
-    const [intensity, setIntensity] = useState(1.0)
+    const [intensity, setIntensity] = useState(1.5)
     const [selectedCategory, setSelectedCategory] = useState<ThemeCategory>('all')
     const [showColorPicker, setShowColorPicker] = useState(false)
     const panelRef = useRef<HTMLDivElement>(null)
@@ -256,7 +256,7 @@ export default function ThemeSwitcher() {
         },
     ]
 
-    const [currentTheme, setCurrentTheme] = useState(themes[6]) // Cyber Pulse by default
+    const [currentTheme, setCurrentTheme] = useState(themes[8]) // Arctic Aurora by default
     const [customThemes, setCustomThemes] = useState<ThemeColors[]>([])
 
     // Category configuration
@@ -428,6 +428,9 @@ export default function ThemeSwitcher() {
         if (savedTheme) {
             const theme = [...themes, ...customThemes].find(t => t.name === savedTheme)
             if (theme) applyTheme(theme)
+        } else {
+            // Apply Arctic Aurora as default on fresh session
+            applyTheme(themes[8])
         }
 
         if (savedDarkMode) {

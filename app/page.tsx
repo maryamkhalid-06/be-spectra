@@ -142,21 +142,23 @@ export default function Home() {
                 desc: "Interactive visualizations and actionable clinical recommendations",
               },
             ].map((feature, idx) => (
-              <div
+              <Card
                 key={idx}
-                className="flex gap-4 p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-primary/30 hover:shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.05))] transition-all duration-500 animate-slide-up group"
+                className="glass-card border-white/5 hover:border-primary/30 hover:bg-white/10 transition-all duration-500 hover:scale-105 group animate-scale-in"
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-all duration-500 border border-white/10">
-                    <feature.icon className="h-7 w-7 text-primary" />
+                <div className="flex flex-row items-center gap-6 p-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-all duration-500 border border-white/10">
+                      <feature.icon className="h-7 w-7 text-primary" />
+                    </div>
+                  </div>
+                  <div className="text-left">
+                    <CardTitle className="font-bold text-white text-xl mb-2 tracking-tight">{feature.title}</CardTitle>
+                    <p className="text-white/40 text-sm leading-relaxed font-light">{feature.desc}</p>
                   </div>
                 </div>
-                <div className="text-left">
-                  <h3 className="font-bold text-white text-xl mb-2 tracking-tight">{feature.title}</h3>
-                  <p className="text-white/40 text-sm leading-relaxed font-light">{feature.desc}</p>
-                </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

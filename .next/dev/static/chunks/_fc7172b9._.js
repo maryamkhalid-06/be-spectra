@@ -1541,7 +1541,7 @@ function ThemeSwitcher() {
     _s();
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isDark, setIsDark] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    const [intensity, setIntensity] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1.0);
+    const [intensity, setIntensity] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1.5);
     const [selectedCategory, setSelectedCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('all');
     const [showColorPicker, setShowColorPicker] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const panelRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -1772,7 +1772,7 @@ function ThemeSwitcher() {
             description: 'Sweet pink and purple'
         }
     ];
-    const [currentTheme, setCurrentTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(themes[6]) // Cyber Pulse by default
+    const [currentTheme, setCurrentTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(themes[8]) // Arctic Aurora by default
     ;
     const [customThemes, setCustomThemes] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     // Category configuration
@@ -1960,6 +1960,9 @@ function ThemeSwitcher() {
                     "ThemeSwitcher.useEffect.theme": (t)=>t.name === savedTheme
                 }["ThemeSwitcher.useEffect.theme"]);
                 if (theme) applyTheme(theme);
+            } else {
+                // Apply Arctic Aurora as default on fresh session
+                applyTheme(themes[8]);
             }
             if (savedDarkMode) {
                 const isDarkMode = savedDarkMode === 'dark';
@@ -1987,7 +1990,7 @@ function ThemeSwitcher() {
                                             children: "Ultimate Themes"
                                         }, void 0, false, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 453,
+                                            lineNumber: 456,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1995,13 +1998,13 @@ function ThemeSwitcher() {
                                             children: "24 themes + custom colors"
                                         }, void 0, false, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 454,
+                                            lineNumber: 457,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 452,
+                                    lineNumber: 455,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2011,18 +2014,18 @@ function ThemeSwitcher() {
                                         className: "w-4 h-4 text-white/60 hover:text-white"
                                     }, void 0, false, {
                                         fileName: "[project]/components/theme-switcher.tsx",
-                                        lineNumber: 460,
+                                        lineNumber: 463,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 456,
+                                    lineNumber: 459,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 451,
+                            lineNumber: 454,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2033,7 +2036,7 @@ function ThemeSwitcher() {
                                     children: "Mode"
                                 }, void 0, false, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 466,
+                                    lineNumber: 469,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2046,7 +2049,7 @@ function ThemeSwitcher() {
                                                 className: "w-4 h-4 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/theme-switcher.tsx",
-                                                lineNumber: 474,
+                                                lineNumber: 477,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2054,7 +2057,7 @@ function ThemeSwitcher() {
                                                 children: "Dark"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/theme-switcher.tsx",
-                                                lineNumber: 475,
+                                                lineNumber: 478,
                                                 columnNumber: 37
                                             }, this)
                                         ]
@@ -2064,7 +2067,7 @@ function ThemeSwitcher() {
                                                 className: "w-4 h-4 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/theme-switcher.tsx",
-                                                lineNumber: 479,
+                                                lineNumber: 482,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2072,20 +2075,20 @@ function ThemeSwitcher() {
                                                 children: "Light"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/theme-switcher.tsx",
-                                                lineNumber: 480,
+                                                lineNumber: 483,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true)
                                 }, void 0, false, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 467,
+                                    lineNumber: 470,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 465,
+                            lineNumber: 468,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2101,7 +2104,7 @@ function ThemeSwitcher() {
                                                     className: "w-4 h-4 text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 490,
+                                                    lineNumber: 493,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2109,13 +2112,13 @@ function ThemeSwitcher() {
                                                     children: "Intensity"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 491,
+                                                    lineNumber: 494,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 489,
+                                            lineNumber: 492,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2126,13 +2129,13 @@ function ThemeSwitcher() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 493,
+                                            lineNumber: 496,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 488,
+                                    lineNumber: 491,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2149,13 +2152,13 @@ function ThemeSwitcher() {
                                     className: "w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
                                 }, void 0, false, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 495,
+                                    lineNumber: 498,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 487,
+                            lineNumber: 490,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2169,19 +2172,19 @@ function ThemeSwitcher() {
                                             children: cat.icon
                                         }, void 0, false, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 521,
+                                            lineNumber: 524,
                                             columnNumber: 33
                                         }, this),
                                         cat.label
                                     ]
                                 }, cat.id, true, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 513,
+                                    lineNumber: 516,
                                     columnNumber: 29
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 511,
+                            lineNumber: 514,
                             columnNumber: 21
                         }, this),
                         showColorPicker && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2192,7 +2195,7 @@ function ThemeSwitcher() {
                                     children: "Create Custom Theme"
                                 }, void 0, false, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 530,
+                                    lineNumber: 533,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2205,7 +2208,7 @@ function ThemeSwitcher() {
                                                     children: "Primary Color"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 533,
+                                                    lineNumber: 536,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2215,13 +2218,13 @@ function ThemeSwitcher() {
                                                     className: "w-full h-10 rounded cursor-pointer"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 534,
+                                                    lineNumber: 537,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 532,
+                                            lineNumber: 535,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2231,7 +2234,7 @@ function ThemeSwitcher() {
                                                     children: "Secondary Color"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 542,
+                                                    lineNumber: 545,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2241,13 +2244,13 @@ function ThemeSwitcher() {
                                                     className: "w-full h-10 rounded cursor-pointer"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 543,
+                                                    lineNumber: 546,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 541,
+                                            lineNumber: 544,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2257,7 +2260,7 @@ function ThemeSwitcher() {
                                                     children: "Accent Color"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 551,
+                                                    lineNumber: 554,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2267,19 +2270,19 @@ function ThemeSwitcher() {
                                                     className: "w-full h-10 rounded cursor-pointer"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 552,
+                                                    lineNumber: 555,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 550,
+                                            lineNumber: 553,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 531,
+                                    lineNumber: 534,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2294,14 +2297,14 @@ function ThemeSwitcher() {
                                                     className: "w-3 h-3 mr-1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 566,
+                                                    lineNumber: 569,
                                                     columnNumber: 37
                                                 }, this),
                                                 "Create"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 561,
+                                            lineNumber: 564,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2311,19 +2314,19 @@ function ThemeSwitcher() {
                                             children: "Cancel"
                                         }, void 0, false, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 569,
+                                            lineNumber: 572,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 560,
+                                    lineNumber: 563,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 529,
+                            lineNumber: 532,
                             columnNumber: 25
                         }, this),
                         !showColorPicker && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2336,7 +2339,7 @@ function ThemeSwitcher() {
                                         className: "w-4 h-4 text-white"
                                     }, void 0, false, {
                                         fileName: "[project]/components/theme-switcher.tsx",
-                                        lineNumber: 587,
+                                        lineNumber: 590,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2344,18 +2347,18 @@ function ThemeSwitcher() {
                                         children: "Create Custom Theme"
                                     }, void 0, false, {
                                         fileName: "[project]/components/theme-switcher.tsx",
-                                        lineNumber: 588,
+                                        lineNumber: 591,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/theme-switcher.tsx",
-                                lineNumber: 586,
+                                lineNumber: 589,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 582,
+                            lineNumber: 585,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2371,7 +2374,7 @@ function ThemeSwitcher() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 595,
+                                    lineNumber: 598,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2395,7 +2398,7 @@ function ThemeSwitcher() {
                                                                     children: theme.icon
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                                    lineNumber: 615,
+                                                                    lineNumber: 618,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2403,13 +2406,13 @@ function ThemeSwitcher() {
                                                                     children: theme.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                                    lineNumber: 616,
+                                                                    lineNumber: 619,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/theme-switcher.tsx",
-                                                            lineNumber: 614,
+                                                            lineNumber: 617,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2422,7 +2425,7 @@ function ThemeSwitcher() {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                                    lineNumber: 619,
+                                                                    lineNumber: 622,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2432,7 +2435,7 @@ function ThemeSwitcher() {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                                    lineNumber: 623,
+                                                                    lineNumber: 626,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2442,43 +2445,43 @@ function ThemeSwitcher() {
                                                                     }
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                                    lineNumber: 627,
+                                                                    lineNumber: 630,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/theme-switcher.tsx",
-                                                            lineNumber: 618,
+                                                            lineNumber: 621,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 613,
+                                                    lineNumber: 616,
                                                     columnNumber: 37
                                                 }, this),
                                                 currentTheme.name === theme.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-black/50"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/theme-switcher.tsx",
-                                                    lineNumber: 634,
+                                                    lineNumber: 637,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, theme.name, true, {
                                             fileName: "[project]/components/theme-switcher.tsx",
-                                            lineNumber: 601,
+                                            lineNumber: 604,
                                             columnNumber: 33
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/theme-switcher.tsx",
-                                    lineNumber: 599,
+                                    lineNumber: 602,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 594,
+                            lineNumber: 597,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2486,18 +2489,18 @@ function ThemeSwitcher() {
                             children: "Themes apply instantly • Auto-saves"
                         }, void 0, false, {
                             fileName: "[project]/components/theme-switcher.tsx",
-                            lineNumber: 641,
+                            lineNumber: 644,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/theme-switcher.tsx",
-                    lineNumber: 449,
+                    lineNumber: 452,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/theme-switcher.tsx",
-                lineNumber: 443,
+                lineNumber: 446,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -2507,22 +2510,22 @@ function ThemeSwitcher() {
                     className: "w-6 h-6 text-white"
                 }, void 0, false, {
                     fileName: "[project]/components/theme-switcher.tsx",
-                    lineNumber: 653,
+                    lineNumber: 656,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/theme-switcher.tsx",
-                lineNumber: 648,
+                lineNumber: 651,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/theme-switcher.tsx",
-        lineNumber: 441,
+        lineNumber: 444,
         columnNumber: 9
     }, this);
 }
-_s(ThemeSwitcher, "Arkl0APZdrqLPRGG2d8eGCFLQDo=");
+_s(ThemeSwitcher, "osYXGOX8YaahCx4NxttCwacqG8g=");
 _c = ThemeSwitcher;
 var _c;
 __turbopack_context__.k.register(_c, "ThemeSwitcher");

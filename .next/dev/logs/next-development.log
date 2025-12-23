@@ -9,3 +9,45 @@
 [00:01:09.725] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
 [00:01:09.725] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766503539023}
 [00:01:18.742] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:25:01.649] Server  WARN     ⚠ Cross origin request detected from b94c04481aa67b.lhr.life to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:25:03.485] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:03.485] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:03.485] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://b94c04481aa67b.lhr.life/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://b94c04481aa67b.lhr.life/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766504972062}
+[00:25:08.918] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:27:09.458] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:09.458] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:27:09.458] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://b94c04481aa67b.lhr.life/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://b94c04481aa67b.lhr.life/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766505097910}
+[00:27:27.220] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://b94c04481aa67b.lhr.life/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"https://b94c04481aa67b.lhr.life/upload","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766505115784}
+[00:37:32.898] Server  WARN     ⚠ Cross origin request detected from 985c7cfe8da75f.lhr.life to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:37:33.797] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:37:33.797] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:37:33.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://985c7cfe8da75f.lhr.life/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://985c7cfe8da75f.lhr.life/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766505722015}
+[00:37:35.754] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[00:38:11.037] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://985c7cfe8da75f.lhr.life/methodology color: rgb(120, 120, 120) color: inherit {"dp":"/methodology","o":"https://985c7cfe8da75f.lhr.life/methodology","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766505759615}
+[00:41:09.840] Server  LOG      ○ Compiling /models ...
+[00:46:59.374] Server  LOG      ✓ Compiled in 665ms
+[00:57:52.770] Server  LOG      ✓ Compiled in 311ms
+[00:58:40.068] Server  LOG      ✓ Compiled in 398ms
+[00:59:17.914] Server  LOG      ✓ Compiled in 541ms
+[01:00:03.381] Server  LOG      ✓ Compiled in 660ms
+[01:00:45.945] Server  LOG      ✓ Compiled in 271ms
+[01:01:23.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:24.893] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:01:24.893] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/upload","route":"/upload"}
+[01:01:24.893] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766507153268}
+[01:03:21.224] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:23.240] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:03:23.240] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/upload","route":"/upload"}
+[01:03:23.240] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766507271544}
+[01:13:07.357] Browser LOG     THREE.WebGLRenderer: Context Lost.
+[01:13:16.432] Server  WARN     ⚠ Cross origin request detected from bb81eb6d8b24bb.lhr.life to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[01:13:18.689] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:13:18.689] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:13:18.689] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://bb81eb6d8b24bb.lhr.life/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://bb81eb6d8b24bb.lhr.life/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766507867242}
+[01:17:14.717] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:17:20.251] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:17:20.251] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:17:20.251] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1766508109548}

@@ -27,9 +27,9 @@ function Navigation() {
                         className: "flex items-center gap-3 group",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-yellow-500/20 transition-all duration-500 shadow-lg",
+                                className: "w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-primary/20 transition-all duration-500 shadow-lg",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                    className: "w-6 h-6 text-yellow-500"
+                                    className: "w-6 h-6 text-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
                                     lineNumber: 12,
@@ -41,7 +41,7 @@ function Navigation() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "hidden sm:inline bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent font-extrabold text-xl tracking-tight",
+                                className: "hidden sm:inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-extrabold text-xl tracking-tight",
                                 children: "BE Spectra"
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
@@ -78,7 +78,7 @@ function Navigation() {
                                     }
                                 ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
-                                        className: "text-sm font-medium text-white/50 hover:text-yellow-400 transition-all duration-300 tracking-wide",
+                                        className: "text-sm font-medium text-white/50 hover:text-primary transition-all duration-300 tracking-wide",
                                         children: item.name
                                     }, item.name, false, {
                                         fileName: "[project]/components/navigation.tsx",
@@ -94,7 +94,7 @@ function Navigation() {
                                 href: "/upload",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                     size: "sm",
-                                    className: "bg-yellow-500 hover:bg-yellow-400 text-black font-bold shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-500 rounded-lg px-6",
+                                    className: "bg-primary hover:bg-primary/80 text-primary-foreground font-bold shadow-[0_0_20px_var(--primary-hex,rgba(139,92,246,0.2))] hover:shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.4))] transition-all duration-500 rounded-lg px-6",
                                     children: "Get Started"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
@@ -4730,7 +4730,7 @@ function UploadPage() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight",
+                                        className: "text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight",
                                         children: "Analyze Cancer Networks"
                                     }, void 0, false, {
                                         fileName: "[project]/app/upload/page.tsx",
@@ -4755,10 +4755,10 @@ function UploadPage() {
                                 variant: "outline",
                                 size: "lg",
                                 onClick: ()=>setModelInfoOpen(true),
-                                className: "gap-3 bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-yellow-400/50 rounded-xl px-8 transition-all duration-500",
+                                className: "gap-3 bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-primary/50 rounded-xl px-8 transition-all duration-500",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$info$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Info$3e$__["Info"], {
-                                        className: "w-5 h-5 text-yellow-500"
+                                        className: "w-5 h-5 text-primary"
                                     }, void 0, false, {
                                         fileName: "[project]/app/upload/page.tsx",
                                         lineNumber: 85,
@@ -4786,7 +4786,7 @@ function UploadPage() {
                                     className: "glass-card border-white/5 sticky top-28 overflow-hidden",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-pink-500"
+                                            className: "absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"
                                         }, void 0, false, {
                                             fileName: "[project]/app/upload/page.tsx",
                                             lineNumber: 93,
@@ -4867,10 +4867,10 @@ function UploadPage() {
                         className: "space-y-12",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "p-10 glass-card border-yellow-500/20 bg-yellow-500/5 rounded-3xl relative overflow-hidden group",
+                                className: "p-10 glass-card border-primary/20 bg-primary/5 rounded-3xl relative overflow-hidden group",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 blur-[100px] -mr-32 -mt-32"
+                                        className: "absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -mr-32 -mt-32"
                                     }, void 0, false, {
                                         fileName: "[project]/app/upload/page.tsx",
                                         lineNumber: 115,
@@ -4880,9 +4880,9 @@ function UploadPage() {
                                         className: "flex flex-col md:flex-row gap-8 items-center relative z-10",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-16 h-16 rounded-2xl bg-yellow-500/20 flex items-center justify-center border border-yellow-500/30 flex-shrink-0",
+                                                className: "w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center border border-primary/30 flex-shrink-0",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$info$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Info$3e$__["Info"], {
-                                                    className: "w-8 h-8 text-yellow-500"
+                                                    className: "w-8 h-8 text-primary"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/upload/page.tsx",
                                                     lineNumber: 118,
@@ -4916,7 +4916,7 @@ function UploadPage() {
                                                         variant: "ghost",
                                                         size: "sm",
                                                         onClick: ()=>setModelInfoOpen(true),
-                                                        className: "text-yellow-500 hover:bg-yellow-500/10 font-bold uppercase tracking-widest text-[10px]",
+                                                        className: "text-primary hover:bg-primary/10 font-bold uppercase tracking-widest text-[10px]",
                                                         children: "View Model Architecture"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/upload/page.tsx",
@@ -4948,7 +4948,7 @@ function UploadPage() {
                                         className: "glass-card border-white/5 p-8 rounded-3xl",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                className: "font-black text-yellow-500 mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl",
+                                                className: "font-black text-primary mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$network$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Network$3e$__["Network"], {
                                                         className: "w-6 h-6"
@@ -4992,7 +4992,7 @@ EGFR,SOS1,0.92,HI-III`
                                         className: "glass-card border-white/5 p-8 rounded-3xl",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                className: "font-black text-pink-500 mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl",
+                                                className: "font-black text-secondary mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$column$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"], {
                                                         className: "w-6 h-6"
