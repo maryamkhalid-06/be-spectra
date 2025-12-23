@@ -16,8 +16,7 @@ from datetime import datetime
 # Example: "https://abc123.loca.lt" or your localhost.run URL
 
 # <<< PASTE YOUR VERCEL URL BELOW >>>
-URL = " https://maryam-67yqews4m-maryams-projects-70c18ddc.vercel.app"
-
+URL = "https://maryam-67yqews4m-maryams-projects-70c18ddc.vercel.app"
 
 # ==================================================
 

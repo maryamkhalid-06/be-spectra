@@ -490,24 +490,23 @@ export default function ThemeSwitcher() {
 
                     {/* Background Style Selection */}
                     <div className="pb-3 border-b border-white/10">
-                        <div className="flex items-center gap-2 mb-2">
-                            <span className="text-lg">🌌</span>
-                            <span className="text-sm font-bold text-white">Background Style</span>
+                        <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-2">
+                                <span className="text-lg">🌌</span>
+                                <span className="text-sm font-bold text-white">Background</span>
+                            </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-2">
+                        <select
+                            value={backgroundTheme}
+                            onChange={(e) => setBackgroundTheme(e.target.value as any)}
+                            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors cursor-pointer"
+                        >
                             {(['genes', 'neural', 'lasers', 'medicine'] as const).map((bg) => (
-                                <button
-                                    key={bg}
-                                    onClick={() => setBackgroundTheme(bg)}
-                                    className={`px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${backgroundTheme === bg
-                                        ? 'bg-primary/20 text-primary border-primary/50 shadow-[0_0_10px_rgba(139,92,246,0.3)]'
-                                        : 'bg-white/5 text-white/40 border-transparent hover:bg-white/10 hover:text-white/60'
-                                        }`}
-                                >
-                                    {bg}
-                                </button>
+                                <option key={bg} value={bg} className="bg-gray-900 text-white">
+                                    {bg.charAt(0).toUpperCase() + bg.slice(1)} Style
+                                </option>
                             ))}
-                        </div>
+                        </select>
                     </div>
 
                     {/* Intensity Control */}
