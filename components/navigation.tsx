@@ -30,7 +30,7 @@ export default function Navigation() {
               <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-extrabold text-lg sm:text-xl tracking-tight whitespace-nowrap">
-              BE Spectra
+              BE Spectra <span className="text-[10px] text-white/40 ml-1 font-mono border border-white/20 rounded px-1">v2.1</span>
             </span>
           </Link>
 
