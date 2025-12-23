@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Palette, Sun, Moon, X, Droplet, Sparkles, Sliders } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useBackground } from '@/components/backgrounds/BackgroundManager'
 
 interface ThemeColors {
     name: string
@@ -17,6 +18,7 @@ interface ThemeColors {
 type ThemeCategory = 'all' | 'warm' | 'cool' | 'neon' | 'pastel' | 'custom'
 
 export default function ThemeSwitcher() {
+    const { theme: backgroundTheme, setTheme: setBackgroundTheme } = useBackground()
     const [isOpen, setIsOpen] = useState(false)
     const [isDark, setIsDark] = useState(true)
     const [intensity, setIntensity] = useState(1.5)
@@ -484,6 +486,28 @@ export default function ThemeSwitcher() {
                                 </>
                             )}
                         </Button>
+                    </div>
+
+                    {/* Background Style Selection */}
+                    <div className="pb-3 border-b border-white/10">
+                        <div className="flex items-center gap-2 mb-2">
+                            <span className="text-lg">🌌</span>
+                            <span className="text-sm font-bold text-white">Background Style</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                            {(['genes', 'neural', 'lasers', 'medicine'] as const).map((bg) => (
+                                <button
+                                    key={bg}
+                                    onClick={() => setBackgroundTheme(bg)}
+                                    className={`px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${backgroundTheme === bg
+                                        ? 'bg-primary/20 text-primary border-primary/50 shadow-[0_0_10px_rgba(139,92,246,0.3)]'
+                                        : 'bg-white/5 text-white/40 border-transparent hover:bg-white/10 hover:text-white/60'
+                                        }`}
+                                >
+                                    {bg}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Intensity Control */}

@@ -89,7 +89,7 @@ export default function BackgroundManager({ children }: { children: ReactNode })
       <div className="fixed inset-0 -z-10 bg-black overflow-hidden">
         {theme === 'genes' && <GenesBackground colors={colors} speed={speed} intensity={intensity} />}
         {theme === 'neural' && <NeuralNetworkBackground colors={colors} speed={speed} intensity={intensity} />}
-        {theme === 'lasers' && <LaserBeamsBackground colors={colors.primary} speed={speed} intensity={intensity} />}
+        {theme === 'lasers' && <LaserBeamsBackground color={colors.primary} speed={speed} intensity={intensity} />}
         {theme === 'medicine' && <MedicineCapsulesBackground colors={colors} speed={speed} intensity={intensity} />}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60 pointer-events-none" />
       </div>
@@ -99,21 +99,7 @@ export default function BackgroundManager({ children }: { children: ReactNode })
 
       <SettingsPanel />
 
-      {/* Dynamic Theme Switcher for Demo/Futuristic feel */}
-      <div className="fixed bottom-6 right-6 z-50 flex gap-2 p-2 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl">
-        {(['genes', 'neural', 'lasers', 'medicine'] as Theme[]).map((t) => (
-          <button
-            key={t}
-            onClick={() => setTheme(t)}
-            className={`px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-widest transition-all duration-500 ${theme === t
-              ? 'bg-blue-600/20 text-blue-400 border border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]'
-              : 'text-white/40 hover:text-white/70 hover:bg-white/5 border border-transparent'
-              }`}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
+      {/* Dynamic Theme Switcher logic integrated into global ThemeSwitcher */}
     </BackgroundContext.Provider>
   );
 }

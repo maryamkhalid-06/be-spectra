@@ -32,8 +32,8 @@ export default function RootLayout({
       <body className={`font-sans antialiased text-white`}>
         <BackgroundManager>
           {children}
+          <ThemeSwitcher />
         </BackgroundManager>
-        <ThemeSwitcher />
         <Analytics />
       </body>
     </html>
