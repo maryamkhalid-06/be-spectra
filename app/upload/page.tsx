@@ -4,6 +4,7 @@ import { useState } from "react"
 import Navigation from "@/components/navigation"
 import DataUploadForm from "@/components/data-upload-form"
 import AnalysisResults from "@/components/analysis-results"
+import QRCodeDisplay from "@/components/qr-code-display"
 import ModelInfoModal from "@/components/model-info-modal"
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -104,6 +105,7 @@ export default function UploadPage() {
           {analysisData && (
             <div className="lg:col-span-2 space-y-8 animate-slide-up">
               <AnalysisResults data={analysisData} />
+              <QRCodeDisplay title="Share Analysis Results" />
             </div>
           )}
         </div>

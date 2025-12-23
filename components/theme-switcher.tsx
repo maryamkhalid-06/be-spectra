@@ -256,7 +256,7 @@ export default function ThemeSwitcher() {
         },
     ]
 
-    const [currentTheme, setCurrentTheme] = useState(themes[8]) // Arctic Aurora by default
+    const [currentTheme, setCurrentTheme] = useState(themes[6]) // Ocean Depths by default
     const [customThemes, setCustomThemes] = useState<ThemeColors[]>([])
 
     // Category configuration
@@ -429,8 +429,8 @@ export default function ThemeSwitcher() {
             const theme = [...themes, ...customThemes].find(t => t.name === savedTheme)
             if (theme) applyTheme(theme)
         } else {
-            // Apply Arctic Aurora as default on fresh session
-            applyTheme(themes[8])
+            // Apply Ocean Depths as default on fresh session
+            applyTheme(themes[6])
         }
 
         if (savedDarkMode) {

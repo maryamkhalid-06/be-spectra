@@ -1170,9 +1170,9 @@ const useBackground = ()=>{
     return context;
 };
 function BackgroundManager({ children }) {
-    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('genes');
-    const [speed, setSpeed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
-    const [intensity, setIntensity] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
+    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('neural');
+    const [speed, setSpeed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(3);
+    const [intensity, setIntensity] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(3);
     const [colors, setColors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         primary: '#8b5cf6',
         secondary: '#ec4899',
@@ -1191,11 +1191,12 @@ function BackgroundManager({ children }) {
                 secondary: secondaryHex,
                 accent: accentHex
             });
-            const savedIntensity = localStorage.getItem('themeIntensity');
-            if (savedIntensity) {
-                setIntensity(parseFloat(savedIntensity));
-            }
-        };
+        /*
+      const savedIntensity = localStorage.getItem('themeIntensity');
+      if (savedIntensity) {
+        setIntensity(parseFloat(savedIntensity));
+      }
+      */ };
         // Observe changes to the style attribute on the html element
         const observer = new MutationObserver(updateFromTheme);
         observer.observe(document.documentElement, {
@@ -1228,7 +1229,7 @@ function BackgroundManager({ children }) {
                         intensity: intensity
                     }, void 0, false, {
                         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                        lineNumber: 88,
+                        lineNumber: 90,
                         columnNumber: 31
                     }, this),
                     theme === 'neural' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$backgrounds$2f$NeuralNetworkBackground$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1237,7 +1238,7 @@ function BackgroundManager({ children }) {
                         intensity: intensity
                     }, void 0, false, {
                         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                        lineNumber: 89,
+                        lineNumber: 91,
                         columnNumber: 32
                     }, this),
                     theme === 'lasers' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$backgrounds$2f$LaserBeamsBackground$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1246,7 +1247,7 @@ function BackgroundManager({ children }) {
                         intensity: intensity
                     }, void 0, false, {
                         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                        lineNumber: 90,
+                        lineNumber: 92,
                         columnNumber: 32
                     }, this),
                     theme === 'medicine' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$backgrounds$2f$MedicineCapsulesBackground$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1255,20 +1256,20 @@ function BackgroundManager({ children }) {
                         intensity: intensity
                     }, void 0, false, {
                         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                        lineNumber: 91,
+                        lineNumber: 93,
                         columnNumber: 34
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60 pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                        lineNumber: 92,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                lineNumber: 87,
+                lineNumber: 89,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1276,12 +1277,12 @@ function BackgroundManager({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                lineNumber: 94,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$backgrounds$2f$SettingsPanel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                lineNumber: 98,
+                lineNumber: 100,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1297,18 +1298,18 @@ function BackgroundManager({ children }) {
                         children: t
                     }, t, false, {
                         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                        lineNumber: 103,
+                        lineNumber: 105,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-                lineNumber: 101,
+                lineNumber: 103,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/backgrounds/BackgroundManager.tsx",
-        lineNumber: 81,
+        lineNumber: 83,
         columnNumber: 5
     }, this);
 }
@@ -1643,7 +1644,7 @@ function ThemeSwitcher() {
             description: 'Sweet pink and purple'
         }
     ];
-    const [currentTheme, setCurrentTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(themes[8]) // Arctic Aurora by default
+    const [currentTheme, setCurrentTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(themes[6]) // Ocean Depths by default
     ;
     const [customThemes, setCustomThemes] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     // Category configuration
@@ -1817,8 +1818,8 @@ function ThemeSwitcher() {
             ].find((t)=>t.name === savedTheme);
             if (theme) applyTheme(theme);
         } else {
-            // Apply Arctic Aurora as default on fresh session
-            applyTheme(themes[8]);
+            // Apply Ocean Depths as default on fresh session
+            applyTheme(themes[6]);
         }
         if (savedDarkMode) {
             const isDarkMode = savedDarkMode === 'dark';

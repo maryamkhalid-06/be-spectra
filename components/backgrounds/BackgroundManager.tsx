@@ -35,9 +35,9 @@ export const useBackground = () => {
 };
 
 export default function BackgroundManager({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('genes');
-  const [speed, setSpeed] = useState(1);
-  const [intensity, setIntensity] = useState(1);
+  const [theme, setTheme] = useState<Theme>('neural');
+  const [speed, setSpeed] = useState(3);
+  const [intensity, setIntensity] = useState(3);
   const [colors, setColors] = useState({
     primary: '#8b5cf6',
     secondary: '#ec4899',
@@ -60,10 +60,12 @@ export default function BackgroundManager({ children }: { children: ReactNode })
         accent: accentHex
       });
 
+      /*
       const savedIntensity = localStorage.getItem('themeIntensity');
       if (savedIntensity) {
         setIntensity(parseFloat(savedIntensity));
       }
+      */
     };
 
     // Observe changes to the style attribute on the html element

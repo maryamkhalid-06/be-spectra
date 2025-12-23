@@ -3,7 +3,7 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { FileDown, Calendar, Clock, Network, Activity } from "lucide-react"
+import { FileDown, Network, Activity } from "lucide-react"
 import GeneVisualization from "@/components/gene-visualization"
 import SurvivalDashboard from "@/components/survival-dashboard"
 import AnalysisInsights from "@/components/analysis-insights"
@@ -18,12 +18,12 @@ export default function AnalysisResults({ data }: AnalysisResultsProps) {
   const getThemeColors = () => {
     if (typeof window !== 'undefined') {
       const root = document.documentElement
-      const primary = getComputedStyle(root).getPropertyValue('--primary-hex').trim() || '#06b6d4'
-      const secondary = getComputedStyle(root).getPropertyValue('--secondary-hex').trim() || '#8b5cf6'
-      const accent = getComputedStyle(root).getPropertyValue('--accent-hex').trim() || '#14b8a6'
+      const primary = getComputedStyle(root).getPropertyValue('--primary-hex').trim() || '#3b82f6'
+      const secondary = getComputedStyle(root).getPropertyValue('--secondary-hex').trim() || '#06b6d4'
+      const accent = getComputedStyle(root).getPropertyValue('--accent-hex').trim() || '#0ea5e9'
       return [primary, secondary, accent, primary, secondary]
     }
-    return ["#06b6d4", "#8b5cf6", "#14b8a6", "#06b6d4", "#8b5cf6"]
+    return ["#3b82f6", "#06b6d4", "#0ea5e9", "#3b82f6", "#06b6d4"]
   }
 
   const colors = getThemeColors()
@@ -36,10 +36,6 @@ export default function AnalysisResults({ data }: AnalysisResultsProps) {
       content: generatePathwayEnrichmentContent(data.enrichment)
     })
   }
-
-  const generationDate = new Date()
-  const expiryDate = new Date(generationDate)
-  expiryDate.setDate(expiryDate.getDate() + 15)
 
   return (
     <div className="space-y-8">
@@ -100,20 +96,6 @@ export default function AnalysisResults({ data }: AnalysisResultsProps) {
                 Export PDF
               </Button>
             </div>
-
-            {/* Validity Banner */}
-            <div className="mt-4 p-3 rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20">
-              <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
-                <div className="flex items-center gap-2 text-white/70">
-                  <Calendar className="w-4 h-4 text-primary" />
-                  <span>Generated: {generationDate.toLocaleDateString()}</span>
-                </div>
-                <div className="flex items-center gap-2 text-primary font-semibold">
-                  <Clock className="w-4 h-4" />
-                  <span>Valid for 15 days (until {expiryDate.toLocaleDateString()})</span>
-                </div>
-              </div>
-            </div>
           </CardHeader>
           <CardContent>
             <ResponsiveContainer width="100%" height={300}>
@@ -134,7 +116,7 @@ export default function AnalysisResults({ data }: AnalysisResultsProps) {
                 <Tooltip
                   contentStyle={{
                     backgroundColor: "rgba(15,15,35,0.95)",
-                    border: "1px solid rgba(6,182,212,0.3)",
+                    border: "1px solid rgba(59,130,246,0.3)",
                     borderRadius: "12px",
                     color: "#fff"
                   }}

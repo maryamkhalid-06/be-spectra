@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Brain, Network } from "lucide-react"
 
 interface Gene {
   name: string
@@ -11,9 +13,10 @@ interface Gene {
   confidence: number
 }
 
-export default function GeneVisualization() {
+export default function Visualization() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [animationProgress, setAnimationProgress] = useState(0)
+  const [mode, setMode] = useState<"neural" | "genes">("neural") // Default to Neural Network visualization
 
   const genes: Gene[] = [
     { name: "TP53", isCancer: true, centrality: 0.892, confidence: 0.94 },
@@ -51,6 +54,14 @@ export default function GeneVisualization() {
     ctx.fillStyle = "rgb(15, 23, 42)"
     ctx.fillRect(0, 0, width, height)
 
+    if (mode === "genes") {
+      drawGenes(ctx, width, height)
+    } else {
+      drawNeural(ctx, width, height)
+    }
+  }, [animationProgress, mode])
+
+  const drawGenes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     // Draw gene nodes with animation
     genes.forEach((gene, index) => {
       const angle = (index / genes.length) * Math.PI * 2 + animationProgress * 0.1
@@ -109,42 +120,133 @@ export default function GeneVisualization() {
         }
       })
     })
-  }, [animationProgress])
+  }
+
+  const drawNeural = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+    // Neural Network Visualization
+    const layers = [4, 6, 6, 4]
+    const layerSpacing = width / (layers.length + 1)
+
+    // Draw connections
+    layers.forEach((nodes, layerIndex) => {
+      if (layerIndex === layers.length - 1) return
+
+      const currentX = (layerIndex + 1) * layerSpacing
+      const nextX = (layerIndex + 2) * layerSpacing
+      const nextNodes = layers[layerIndex + 1]
+
+      const currentNodeSpacing = height / (nodes + 1)
+      const nextNodeSpacing = height / (nextNodes + 1)
+
+      for (let i = 0; i < nodes; i++) {
+        for (let j = 0; j < nextNodes; j++) {
+          const y1 = (i + 1) * currentNodeSpacing
+          const y2 = (j + 1) * nextNodeSpacing
+
+          // Animate pulses traveling
+          const offset = (layerIndex * 13 + i * 7 + j * 3)
+          const pulsePos = (animationProgress * 3 + offset / 20) % 1
+
+          ctx.strokeStyle = `rgba(59, 130, 246, 0.15)`
+          ctx.lineWidth = 1
+          ctx.beginPath()
+          ctx.moveTo(currentX, y1)
+          ctx.lineTo(nextX, y2)
+          ctx.stroke()
+
+          // Draw pulses
+          const pulseX = currentX + (nextX - currentX) * pulsePos
+          const pulseY = y1 + (y2 - y1) * pulsePos
+
+          ctx.fillStyle = `rgba(6, 182, 212, ${1 - Math.abs(0.5 - pulsePos)})`
+          ctx.beginPath()
+          ctx.arc(pulseX, pulseY, 2, 0, Math.PI * 2)
+          ctx.fill()
+        }
+      }
+    })
+
+    // Draw nodes
+    layers.forEach((nodes, layerIndex) => {
+      const x = (layerIndex + 1) * layerSpacing
+      const nodeSpacing = height / (nodes + 1)
+
+      for (let i = 0; i < nodes; i++) {
+        const y = (i + 1) * nodeSpacing
+
+        // Node glow
+        const pulse = Math.sin(animationProgress * 5 + i + layerIndex) * 0.5 + 0.5
+        const size = 6 + pulse * 2
+
+        ctx.fillStyle = "rgba(59, 130, 246, 0.2)"
+        ctx.beginPath()
+        ctx.arc(x, y, size + 8, 0, Math.PI * 2)
+        ctx.fill()
+
+        ctx.fillStyle = layerIndex === 0 ? "#60a5fa" : layerIndex === layers.length - 1 ? "#34d399" : "#8b5cf6"
+        ctx.beginPath()
+        ctx.arc(x, y, size, 0, Math.PI * 2)
+        ctx.fill()
+      }
+    })
+  }
 
   return (
-    <Card className="bg-card/50 border-border">
+    <Card className="glass-card border-white/10 hover:border-primary/30 transition-all duration-500">
       <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          <span>Top Cancer Driver Genes - Network Visualization</span>
-          <div className="flex gap-2">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500" />
-              <span className="text-xs text-muted-foreground">Cancer Driver</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-blue-500" />
-              <span className="text-xs text-muted-foreground">Normal Gene</span>
-            </div>
-          </div>
-        </CardTitle>
+        <div className="flex items-center justify-between flex-wrap gap-4">
+          <CardTitle className="text-xl text-white">Network Architecture Visualization</CardTitle>
+          <Tabs value={mode} onValueChange={(v: string) => setMode(v as "neural" | "genes")} className="w-[300px]">
+            <TabsList className="grid w-full grid-cols-2 bg-white/5 border border-white/10">
+              <TabsTrigger value="neural" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
+                <Brain className="w-4 h-4 mr-2" />
+                Neural Net
+              </TabsTrigger>
+              <TabsTrigger value="genes" className="data-[state=active]:bg-primary/20 data-[state=active]:text-primary">
+                <Network className="w-4 h-4 mr-2" />
+                Gene Graph
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
       </CardHeader>
       <CardContent>
-        <canvas ref={canvasRef} className="w-full h-80 rounded-lg" style={{ background: "rgb(15, 23, 42)" }} />
-        <div className="mt-6 grid grid-cols-2 gap-3">
-          {genes.slice(0, 5).map((gene) => (
-            <div key={gene.name} className="p-3 rounded bg-card/50 border border-border/50">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-sm">{gene.name}</p>
-                  <p className="text-xs text-muted-foreground">Centrality: {(gene.centrality * 100).toFixed(1)}%</p>
+        <canvas ref={canvasRef} className="w-full h-80 rounded-xl border border-white/10 bg-black/40" />
+
+        {mode === "genes" && (
+          <div className="mt-6 grid grid-cols-2 gap-3 animate-slide-up">
+            {genes.slice(0, 4).map((gene) => (
+              <div key={gene.name} className="p-3 rounded-lg bg-white/5 border border-white/10 hover:border-primary/30 transition-colors">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-semibold text-sm text-white">{gene.name}</p>
+                    <p className="text-xs text-white/50">Centrality: {(gene.centrality * 100).toFixed(1)}%</p>
+                  </div>
+                  <Badge className={gene.isCancer ? "bg-red-500/10 text-red-400 border-red-500/20" : "bg-blue-500/10 text-blue-400 border-blue-500/20"}>
+                    {(gene.confidence * 100).toFixed(0)}%
+                  </Badge>
                 </div>
-                <Badge className={gene.isCancer ? "bg-red-500/20 text-red-400" : "bg-blue-500/20 text-blue-400"}>
-                  {(gene.confidence * 100).toFixed(0)}%
-                </Badge>
               </div>
+            ))}
+          </div>
+        )}
+
+        {mode === "neural" && (
+          <div className="mt-6 grid grid-cols-3 gap-4 animate-slide-up">
+            <div className="p-3 rounded-lg bg-white/5 border border-white/10">
+              <div className="text-xs text-white/50 mb-1">Input Layer</div>
+              <div className="text-sm font-semibold text-blue-400">Gene Expression Features</div>
             </div>
-          ))}
-        </div>
+            <div className="p-3 rounded-lg bg-white/5 border border-white/10">
+              <div className="text-xs text-white/50 mb-1">Hidden Layers</div>
+              <div className="text-sm font-semibold text-purple-400">GNN Attention Blocks</div>
+            </div>
+            <div className="p-3 rounded-lg bg-white/5 border border-white/10">
+              <div className="text-xs text-white/50 mb-1">Output Layer</div>
+              <div className="text-sm font-semibold text-emerald-400">Risk Stratification</div>
+            </div>
+          </div>
+        )}
       </CardContent>
     </Card>
   )

@@ -3,7 +3,7 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from "recharts"
-import { FileDown, Calendar, Clock, Dna, Target } from "lucide-react"
+import { FileDown, Dna, Target } from "lucide-react"
 import { generatePDFReport, generatePathwayEnrichmentContent } from "@/utils/pdf-export"
 
 export default function PathwayEnrichmentDetail() {
@@ -22,11 +22,11 @@ export default function PathwayEnrichmentDetail() {
   const getThemeColors = () => {
     if (typeof window !== 'undefined') {
       const root = document.documentElement
-      const primary = getComputedStyle(root).getPropertyValue('--primary-hex').trim() || '#06b6d4'
-      const secondary = getComputedStyle(root).getPropertyValue('--secondary-hex').trim() || '#8b5cf6'
+      const primary = getComputedStyle(root).getPropertyValue('--primary-hex').trim() || '#3b82f6'
+      const secondary = getComputedStyle(root).getPropertyValue('--secondary-hex').trim() || '#06b6d4'
       return [primary, secondary]
     }
-    return ["#06b6d4", "#8b5cf6"]
+    return ["#3b82f6", "#06b6d4"]
   }
 
   const colors = getThemeColors()
@@ -39,10 +39,6 @@ export default function PathwayEnrichmentDetail() {
       content: generatePathwayEnrichmentContent(enrichmentData)
     })
   }
-
-  const generationDate = new Date()
-  const expiryDate = new Date(generationDate)
-  expiryDate.setDate(expiryDate.getDate() + 15)
 
   return (
     <Card className="glass-card border-white/10 hover:border-primary/30 transition-all duration-500">
@@ -63,20 +59,6 @@ export default function PathwayEnrichmentDetail() {
             Export PDF
           </Button>
         </div>
-
-        {/* Validity Banner */}
-        <div className="mt-4 p-3 rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20">
-          <div className="flex items-center justify-between flex-wrap gap-2 text-sm">
-            <div className="flex items-center gap-2 text-white/70">
-              <Calendar className="w-4 h-4 text-primary" />
-              <span>Generated: {generationDate.toLocaleDateString()}</span>
-            </div>
-            <div className="flex items-center gap-2 text-primary font-semibold">
-              <Clock className="w-4 h-4" />
-              <span>Valid for 15 days (until {expiryDate.toLocaleDateString()})</span>
-            </div>
-          </div>
-        </div>
       </CardHeader>
       <CardContent className="space-y-8">
         {/* Main Chart */}
@@ -96,7 +78,7 @@ export default function PathwayEnrichmentDetail() {
               <Tooltip
                 contentStyle={{
                   backgroundColor: "rgba(15,15,35,0.95)",
-                  border: "1px solid rgba(6,182,212,0.3)",
+                  border: "1px solid rgba(59,130,246,0.3)",
                   borderRadius: "12px",
                   color: "#fff"
                 }}

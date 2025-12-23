@@ -3519,9 +3519,7 @@ __turbopack_context__.s([
 ]);
 "use client";
 function generatePDFReport(options) {
-    const { title, generationDate, validityDays, content } = options;
-    const expiryDate = new Date(generationDate);
-    expiryDate.setDate(expiryDate.getDate() + validityDays);
+    const { title, generationDate, content } = options;
     const formatDate = (date)=>{
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
@@ -3554,13 +3552,13 @@ function generatePDFReport(options) {
           text-align: center;
           margin-bottom: 40px;
           padding: 30px;
-          background: rgba(6, 182, 212, 0.1);
-          border: 1px solid rgba(6, 182, 212, 0.3);
+          background: rgba(59, 130, 246, 0.1);
+          border: 1px solid rgba(59, 130, 246, 0.3);
           border-radius: 16px;
         }
         .header h1 {
           font-size: 28px;
-          background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+          background: linear-gradient(135deg, #3b82f6, #06b6d4);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin-bottom: 10px;
@@ -3569,33 +3567,10 @@ function generatePDFReport(options) {
           color: #a0a0a0;
           font-size: 14px;
         }
-        .validity-banner {
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2));
-          border: 2px solid #06b6d4;
-          border-radius: 12px;
-          padding: 20px;
-          margin: 20px 0;
-          text-align: center;
-        }
-        .validity-banner .badge {
-          display: inline-block;
-          background: #06b6d4;
-          color: #000;
-          padding: 8px 20px;
-          border-radius: 20px;
-          font-weight: bold;
-          font-size: 14px;
-          margin-bottom: 10px;
-        }
-        .validity-banner .dates {
-          font-size: 13px;
-          color: #b0b0b0;
-        }
-        .validity-banner .expiry {
-          font-size: 16px;
-          color: #06b6d4;
-          font-weight: bold;
-          margin-top: 8px;
+        .header .date {
+          color: #64748b;
+          font-size: 12px;
+          margin-top: 10px;
         }
         .content {
           background: rgba(255, 255, 255, 0.05);
@@ -3606,10 +3581,10 @@ function generatePDFReport(options) {
         }
         .section-title {
           font-size: 20px;
-          color: #06b6d4;
+          color: #3b82f6;
           margin-bottom: 20px;
           padding-bottom: 10px;
-          border-bottom: 1px solid rgba(6, 182, 212, 0.3);
+          border-bottom: 1px solid rgba(59, 130, 246, 0.3);
         }
         table {
           width: 100%;
@@ -3622,8 +3597,8 @@ function generatePDFReport(options) {
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         th {
-          background: rgba(6, 182, 212, 0.2);
-          color: #06b6d4;
+          background: rgba(59, 130, 246, 0.2);
+          color: #3b82f6;
           font-weight: 600;
         }
         tr:hover {
@@ -3639,9 +3614,8 @@ function generatePDFReport(options) {
         }
         @media print {
           body { background: white; color: #333; }
-          .header { background: #f0f9ff; border-color: #0891b2; }
-          .header h1 { -webkit-text-fill-color: #0891b2; }
-          .validity-banner { background: #f0f9ff; }
+          .header { background: #f0f9ff; border-color: #3b82f6; }
+          .header h1 { -webkit-text-fill-color: #3b82f6; }
           .content { background: #f8fafc; border-color: #e2e8f0; }
           th { background: #e0f2fe; }
         }
@@ -3651,16 +3625,7 @@ function generatePDFReport(options) {
       <div class="header">
         <h1>🧬 ${title}</h1>
         <p class="subtitle">BE Spectra Research Platform - Cancer Network Analysis</p>
-      </div>
-      
-      <div class="validity-banner">
-        <div class="badge">✓ VALID REPORT</div>
-        <div class="dates">
-          Generated: ${formatDate(generationDate)}
-        </div>
-        <div class="expiry">
-          Valid until: ${formatDate(expiryDate)} (${validityDays} days)
-        </div>
+        <p class="date">Generated: ${formatDate(generationDate)}</p>
       </div>
       
       <div class="content">
@@ -3668,8 +3633,8 @@ function generatePDFReport(options) {
       </div>
       
       <div class="footer">
-        <p>© 2025 BE Spectra Research Platform | This report is valid for ${validityDays} days from generation date</p>
-        <p>For verification, contact: research@bespectra.ai</p>
+        <p>© 2025 BE Spectra Research Platform</p>
+        <p>For inquiries: research@bespectra.ai</p>
       </div>
     </body>
     </html>
@@ -3713,8 +3678,8 @@ function generatePathwayEnrichmentContent(data) {
       </tbody>
     </table>
     
-    <div style="margin-top: 30px; padding: 20px; background: rgba(6, 182, 212, 0.1); border-radius: 12px;">
-      <h4 style="color: #06b6d4; margin-bottom: 10px;">📈 Analysis Summary</h4>
+    <div style="margin-top: 30px; padding: 20px; background: rgba(59, 130, 246, 0.1); border-radius: 12px;">
+      <h4 style="color: #3b82f6; margin-bottom: 10px;">📈 Analysis Summary</h4>
       <ul style="color: #b0b0b0; line-height: 1.8;">
         <li>Total pathways analyzed: ${data.length}</li>
         <li>Most significant: ${data[0]?.pathway || 'N/A'} (p=${data[0]?.pValue.toExponential(2) || 'N/A'})</li>
@@ -3743,8 +3708,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/ResponsiveContainer.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/Cell.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileDown$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/file-down.js [app-ssr] (ecmascript) <export default as FileDown>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/calendar.js [app-ssr] (ecmascript) <export default as Calendar>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/clock.js [app-ssr] (ecmascript) <export default as Clock>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$dna$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Dna$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/dna.js [app-ssr] (ecmascript) <export default as Dna>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/target.js [app-ssr] (ecmascript) <export default as Target>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$pdf$2d$export$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/utils/pdf-export.ts [app-ssr] (ecmascript)");
@@ -3803,8 +3766,8 @@ function PathwayEnrichmentDetail() {
         if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
         ;
         return [
-            "#06b6d4",
-            "#8b5cf6"
+            "#3b82f6",
+            "#06b6d4"
         ];
     };
     const colors = getThemeColors();
@@ -3816,140 +3779,66 @@ function PathwayEnrichmentDetail() {
             content: (0, __TURBOPACK__imported__module__$5b$project$5d2f$utils$2f$pdf$2d$export$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["generatePathwayEnrichmentContent"])(enrichmentData)
         });
     };
-    const generationDate = new Date();
-    const expiryDate = new Date(generationDate);
-    expiryDate.setDate(expiryDate.getDate() + 15);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
         className: "glass-card border-white/10 hover:border-primary/30 transition-all duration-500",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardHeader"], {
                 className: "pb-8",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-start justify-between flex-wrap gap-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-3xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2",
-                                        children: "Pathway Enrichment Analysis"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 52,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-white/60",
-                                        children: "Significantly enriched KEGG pathways identified in cancer driver genes"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 55,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 51,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                onClick: handleExportPDF,
-                                size: "sm",
-                                className: "gap-2 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileDown$3e$__["FileDown"], {
-                                        className: "w-4 h-4"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 62,
-                                        columnNumber: 13
-                                    }, this),
-                                    "Export PDF"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 57,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                        lineNumber: 50,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-4 p-3 rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-between flex-wrap gap-2 text-sm",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-start justify-between flex-wrap gap-4",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center gap-2 text-white/70",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$calendar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Calendar$3e$__["Calendar"], {
-                                            className: "w-4 h-4 text-primary"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 71,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: [
-                                                "Generated: ",
-                                                generationDate.toLocaleDateString()
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 72,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "text-3xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-2",
+                                    children: "Pathway Enrichment Analysis"
+                                }, void 0, false, {
                                     fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center gap-2 text-primary font-semibold",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
-                                            className: "w-4 h-4"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 75,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: [
-                                                "Valid for 15 days (until ",
-                                                expiryDate.toLocaleDateString(),
-                                                ")"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 76,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-white/60",
+                                    children: "Significantly enriched KEGG pathways identified in cancer driver genes"
+                                }, void 0, false, {
                                     fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 51,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                            lineNumber: 69,
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                            onClick: handleExportPDF,
+                            size: "sm",
+                            className: "gap-2 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileDown$3e$__["FileDown"], {
+                                    className: "w-4 h-4"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/pathway-enrichment-detail.tsx",
+                                    lineNumber: 58,
+                                    columnNumber: 13
+                                }, this),
+                                "Export PDF"
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/pathway-enrichment-detail.tsx",
+                            lineNumber: 53,
                             columnNumber: 11
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                        lineNumber: 68,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/pathway-enrichment-detail.tsx",
+                    lineNumber: 46,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                lineNumber: 49,
+                lineNumber: 45,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -3963,7 +3852,7 @@ function PathwayEnrichmentDetail() {
                                 children: "Statistical Significance (-log10 p-value)"
                             }, void 0, false, {
                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 84,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ResponsiveContainer"], {
@@ -3983,7 +3872,7 @@ function PathwayEnrichmentDetail() {
                                             stroke: "rgba(255,255,255,0.1)"
                                         }, void 0, false, {
                                             fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 69,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["XAxis"], {
@@ -3997,7 +3886,7 @@ function PathwayEnrichmentDetail() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 88,
+                                            lineNumber: 70,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["YAxis"], {
@@ -4006,13 +3895,13 @@ function PathwayEnrichmentDetail() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 95,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {
                                             contentStyle: {
                                                 backgroundColor: "rgba(15,15,35,0.95)",
-                                                border: "1px solid rgba(6,182,212,0.3)",
+                                                border: "1px solid rgba(59,130,246,0.3)",
                                                 borderRadius: "12px",
                                                 color: "#fff"
                                             },
@@ -4024,7 +3913,7 @@ function PathwayEnrichmentDetail() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 78,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Bar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Bar"], {
@@ -4040,29 +3929,29 @@ function PathwayEnrichmentDetail() {
                                                     fill: colors[index % colors.length]
                                                 }, `cell-${index}`, false, {
                                                     fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                    lineNumber: 112,
+                                                    lineNumber: 94,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 92,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 68,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 85,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                        lineNumber: 83,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4073,7 +3962,7 @@ function PathwayEnrichmentDetail() {
                                 children: "Top Enriched Pathways"
                             }, void 0, false, {
                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 121,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4094,7 +3983,7 @@ function PathwayEnrichmentDetail() {
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                                lineNumber: 127,
+                                                                lineNumber: 109,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -4102,13 +3991,13 @@ function PathwayEnrichmentDetail() {
                                                                 children: pathway.pathway
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                                lineNumber: 128,
+                                                                lineNumber: 110,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                        lineNumber: 126,
+                                                        lineNumber: 108,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4121,13 +4010,13 @@ function PathwayEnrichmentDetail() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                        lineNumber: 130,
+                                                        lineNumber: 112,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 107,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4138,7 +4027,7 @@ function PathwayEnrichmentDetail() {
                                                         children: pathway.genes
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 117,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4146,30 +4035,30 @@ function PathwayEnrichmentDetail() {
                                                         children: "genes"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                        lineNumber: 136,
+                                                        lineNumber: 118,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 116,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 106,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 122,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                        lineNumber: 120,
+                        lineNumber: 102,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4185,7 +4074,7 @@ function PathwayEnrichmentDetail() {
                                                 className: "w-5 h-5 text-primary"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 129,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -4193,13 +4082,13 @@ function PathwayEnrichmentDetail() {
                                                 children: "Cancer Biology Implications"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 148,
+                                                lineNumber: 130,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 128,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -4209,40 +4098,40 @@ function PathwayEnrichmentDetail() {
                                                 children: "• Purine/Pyrimidine metabolism: Essential for DNA synthesis and cell proliferation"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 151,
+                                                lineNumber: 133,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "• DNA repair pathways: Critical for genomic stability and mutation accumulation"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 134,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "• Cell cycle regulation: Core oncogenic mechanisms in cancer progression"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 135,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "• Apoptosis: Evasion mechanisms enable tumor survival"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 154,
+                                                lineNumber: 136,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 132,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 145,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4255,7 +4144,7 @@ function PathwayEnrichmentDetail() {
                                                 className: "w-5 h-5 text-secondary"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 160,
+                                                lineNumber: 142,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h5", {
@@ -4263,13 +4152,13 @@ function PathwayEnrichmentDetail() {
                                                 children: "Validation & Translation"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 161,
+                                                lineNumber: 143,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 141,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -4279,58 +4168,58 @@ function PathwayEnrichmentDetail() {
                                                 children: "• Cross-validation across TCGA cancer cohorts (n>5,000)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 164,
+                                                lineNumber: 146,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "• Literature mining confirms 87% of identified genes in cancer databases"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 147,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "• Druggability assessment shows 42% targetable with existing therapies"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 148,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: "• Clinical translation for personalized treatment selection"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 149,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                        lineNumber: 163,
+                                        lineNumber: 145,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                                lineNumber: 158,
+                                lineNumber: 140,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                        lineNumber: 144,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/pathway-enrichment-detail.tsx",
-                lineNumber: 81,
+                lineNumber: 63,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/pathway-enrichment-detail.tsx",
-        lineNumber: 48,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }
