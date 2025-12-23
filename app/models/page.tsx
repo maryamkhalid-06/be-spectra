@@ -18,7 +18,7 @@ export default function ModelsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <div className="mb-20 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight">
             Advanced AI Models
           </h1>
           <p className="text-xl text-white/50 font-light max-w-3xl mx-auto">
@@ -39,8 +39,8 @@ export default function ModelsPage() {
                 <h2 className="text-3xl font-extrabold text-white mb-3 tracking-tight">Gene Classification Engine</h2>
                 <p className="text-white/40 font-light">Graph Attention Network for Cancer Driver Gene Identification</p>
               </div>
-              <div className="bg-yellow-500/20 px-4 py-2 rounded-full border border-yellow-500/30">
-                <span className="text-yellow-500 text-xs font-bold uppercase tracking-widest">Active Model</span>
+              <div className="bg-primary/20 px-4 py-2 rounded-full border border-primary/30">
+                <span className="text-primary text-xs font-bold uppercase tracking-widest">Active Model</span>
               </div>
             </div>
           </CardHeader>
@@ -49,13 +49,13 @@ export default function ModelsPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-8 h-1 bg-yellow-500 rounded-full" />
+                  <span className="w-8 h-1 bg-primary rounded-full" />
                   Architecture Overview
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { n: 1, t: "Input Layer", d: "Multi-omic features & high-confidence PPI topology (score ≥0.85)", c: "bg-yellow-500" },
-                    { n: 2, t: "GAT Layers (3×)", d: "8-head attention mechanism aggregating neighbor information", c: "bg-pink-500" },
+                    { n: 1, t: "Input Layer", d: "Multi-omic features & high-confidence PPI topology (score ≥0.85)", c: "bg-primary" },
+                    { n: 2, t: "GAT Layers (3×)", d: "8-head attention mechanism aggregating neighbor information", c: "bg-secondary" },
                     { n: 3, t: "Global Pooling", d: "Captures macro-level graph structure into single embeddings", c: "bg-blue-500" },
                     { n: 4, t: "Classification Head", d: "Softmax-activated layers for precise driver probability", c: "bg-indigo-500" }
                   ].map((step) => (
@@ -74,14 +74,14 @@ export default function ModelsPage() {
 
               <div className="space-y-8">
                 <div className="bg-black/40 rounded-2xl p-8 border border-white/5 h-full flex flex-col justify-center">
-                  <h4 className="font-bold text-yellow-500 text-xs uppercase tracking-widest mb-8 text-center">Benchmark Metrics</h4>
+                  <h4 className="font-bold text-primary text-xs uppercase tracking-widest mb-8 text-center">Benchmark Metrics</h4>
                   <div className="grid grid-cols-2 gap-8">
                     <div className="text-center group">
-                      <p className="text-white/30 text-[10px] uppercase mb-1 group-hover:text-yellow-500 transition-colors">Accuracy</p>
-                      <p className="text-3xl font-black text-white">70.6<span className="text-yellow-500 text-sm">%</span></p>
+                      <p className="text-white/30 text-[10px] uppercase mb-1 group-hover:text-primary transition-colors">Accuracy</p>
+                      <p className="text-3xl font-black text-white">70.6<span className="text-primary text-sm">%</span></p>
                     </div>
                     <div className="text-center group">
-                      <p className="text-white/30 text-[10px] uppercase mb-1 group-hover:text-pink-500 transition-colors">ROC-AUC</p>
+                      <p className="text-white/30 text-[10px] uppercase mb-1 group-hover:text-secondary transition-colors">ROC-AUC</p>
                       <p className="text-3xl font-black text-white">0.726</p>
                     </div>
                     <div className="text-center group">

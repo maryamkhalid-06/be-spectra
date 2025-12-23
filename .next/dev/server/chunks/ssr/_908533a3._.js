@@ -27,9 +27,9 @@ function Navigation() {
                         className: "flex items-center gap-3 group",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-yellow-500/20 transition-all duration-500 shadow-lg",
+                                className: "w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-primary/20 transition-all duration-500 shadow-lg",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                    className: "w-6 h-6 text-yellow-500"
+                                    className: "w-6 h-6 text-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
                                     lineNumber: 12,
@@ -41,7 +41,7 @@ function Navigation() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "hidden sm:inline bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent font-extrabold text-xl tracking-tight",
+                                className: "hidden sm:inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-extrabold text-xl tracking-tight",
                                 children: "BE Spectra"
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
@@ -78,7 +78,7 @@ function Navigation() {
                                     }
                                 ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
-                                        className: "text-sm font-medium text-white/50 hover:text-yellow-400 transition-all duration-300 tracking-wide",
+                                        className: "text-sm font-medium text-white/50 hover:text-primary transition-all duration-300 tracking-wide",
                                         children: item.name
                                     }, item.name, false, {
                                         fileName: "[project]/components/navigation.tsx",
@@ -94,7 +94,7 @@ function Navigation() {
                                 href: "/upload",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                     size: "sm",
-                                    className: "bg-yellow-500 hover:bg-yellow-400 text-black font-bold shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-500 rounded-lg px-6",
+                                    className: "bg-primary hover:bg-primary/80 text-primary-foreground font-bold shadow-[0_0_20px_var(--primary-hex,rgba(139,92,246,0.2))] hover:shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.4))] transition-all duration-500 rounded-lg px-6",
                                     children: "Get Started"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
@@ -359,7 +359,7 @@ function Methodology() {
                         className: "mb-16 text-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-5xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight",
+                                className: "text-5xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight",
                                 children: "Spectral Graph Theory & GNNs"
                             }, void 0, false, {
                                 fileName: "[project]/app/methodology/page.tsx",
@@ -405,7 +405,7 @@ function Methodology() {
                                         className: "space-y-6 pt-8",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "font-bold text-yellow-500 uppercase tracking-widest text-xs",
+                                                className: "font-bold text-primary uppercase tracking-widest text-xs",
                                                 children: "Protein-Protein Interaction Network"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -419,7 +419,7 @@ function Methodology() {
                                                         className: "flex items-center gap-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "w-1.5 h-1.5 bg-yellow-500 rounded-full"
+                                                                className: "w-1.5 h-1.5 bg-primary rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
                                                                 lineNumber: 55,
@@ -454,7 +454,7 @@ function Methodology() {
                                                         className: "flex items-center gap-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "w-1.5 h-1.5 bg-yellow-500 rounded-full"
+                                                                className: "w-1.5 h-1.5 bg-primary rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
                                                                 lineNumber: 59,
@@ -489,7 +489,7 @@ function Methodology() {
                                                         className: "flex items-center gap-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "w-1.5 h-1.5 bg-yellow-500 rounded-full"
+                                                                className: "w-1.5 h-1.5 bg-primary rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
                                                                 lineNumber: 63,
@@ -523,7 +523,7 @@ function Methodology() {
                                                         className: "flex items-center gap-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "w-1.5 h-1.5 bg-yellow-500 rounded-full"
+                                                                className: "w-1.5 h-1.5 bg-primary rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
                                                                 lineNumber: 67,
@@ -561,12 +561,12 @@ function Methodology() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-yellow-500/10 p-4 rounded-xl border border-yellow-500/20",
+                                                className: "bg-primary/10 p-4 rounded-xl border border-primary/20",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-sm text-yellow-500 font-medium",
+                                                    className: "text-sm text-primary font-medium",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                            className: "text-yellow-400",
+                                                            className: "text-primary",
                                                             children: "Class Imbalance:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/methodology/page.tsx",
@@ -659,7 +659,7 @@ function Methodology() {
                                                         className: "bg-black/40 p-6 rounded-2xl border border-white/5",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "font-bold text-pink-400 text-xs uppercase tracking-widest mb-4",
+                                                                className: "font-bold text-secondary text-xs uppercase tracking-widest mb-4",
                                                                 children: "Key Properties"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -672,7 +672,7 @@ function Methodology() {
                                                                         className: "flex items-center gap-2",
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "w-1 h-1 bg-pink-500 rounded-full"
+                                                                                className: "w-1 h-1 bg-secondary rounded-full"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/methodology/page.tsx",
                                                                                 lineNumber: 95,
@@ -890,7 +890,7 @@ function Methodology() {
                                                         className: "p-4 rounded-xl bg-black/40 border border-white/5",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-xs font-bold text-pink-400 uppercase tracking-widest mb-1",
+                                                                className: "text-xs font-bold text-secondary uppercase tracking-widest mb-1",
                                                                 children: "Input Data"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -915,7 +915,7 @@ function Methodology() {
                                                         className: "p-4 rounded-xl bg-black/40 border border-white/5",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-xs font-bold text-pink-400 uppercase tracking-widest mb-1",
+                                                                className: "text-xs font-bold text-secondary uppercase tracking-widest mb-1",
                                                                 children: "Architecture"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -940,7 +940,7 @@ function Methodology() {
                                                         className: "p-4 rounded-xl bg-black/40 border border-white/5",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-xs font-bold text-pink-400 uppercase tracking-widest mb-1",
+                                                                className: "text-xs font-bold text-secondary uppercase tracking-widest mb-1",
                                                                 children: "Loss Function"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -962,10 +962,10 @@ function Methodology() {
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "bg-pink-500/10 p-6 rounded-2xl border border-pink-500/20 mt-6",
+                                                        className: "bg-secondary/10 p-6 rounded-2xl border border-secondary/20 mt-6",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-sm font-bold text-pink-400 mb-4 uppercase tracking-widest",
+                                                                className: "text-sm font-bold text-secondary mb-4 uppercase tracking-widest",
                                                                 children: "Validation Performance (Test Set)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -1021,7 +1021,7 @@ function Methodology() {
                                                 children: [
                                                     "Network topology improves survival prediction by ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-pink-400 font-bold",
+                                                        className: "text-secondary font-bold",
                                                         children: "12%"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/methodology/page.tsx",
@@ -1069,7 +1069,7 @@ function Methodology() {
                                         className: "space-y-6 pt-8",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "font-bold text-yellow-500 uppercase tracking-widest text-xs",
+                                                className: "font-bold text-primary uppercase tracking-widest text-xs",
                                                 children: "Top Enriched Pathways (FDR < 0.01)"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -1122,7 +1122,7 @@ function Methodology() {
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-sm font-bold text-pink-400 mb-4",
+                                                                className: "text-sm font-bold text-secondary mb-4",
                                                                 children: "GO Biological Process"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/methodology/page.tsx",
@@ -1135,7 +1135,7 @@ function Methodology() {
                                                                         className: "flex items-center gap-2",
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "w-1 h-1 bg-pink-500 rounded-full"
+                                                                                className: "w-1 h-1 bg-secondary rounded-full"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/methodology/page.tsx",
                                                                                 lineNumber: 200,
@@ -1186,7 +1186,7 @@ function Methodology() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
-                                className: "bg-yellow-500/10 border-yellow-500/20 p-8 rounded-3xl",
+                                className: "bg-primary/10 border-primary/20 p-8 rounded-3xl",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardHeader"], {
                                         className: "p-0 mb-4",

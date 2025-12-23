@@ -13,16 +13,16 @@ export default function Home() {
       <section className="relative px-4 py-32 sm:px-6 lg:px-8 overflow-hidden">
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-6 animate-slide-up shadow-[0_0_20px_rgba(234,179,8,0.1)]">
-              <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse-glow" />
-              <span className="text-sm text-yellow-500/80 font-semibold tracking-wider uppercase">BE Spectra Research Platform</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-6 animate-slide-up shadow-[0_0_20px_var(--primary-hex,rgba(139,92,246,0.15))]">
+              <span className="w-2 h-2 bg-primary rounded-full animate-pulse-glow" />
+              <span className="text-sm text-primary font-semibold tracking-wider uppercase">BE Spectra Research Platform</span>
             </div>
 
             <h1
               className="text-6xl md:text-7xl font-extrabold text-balance mb-6 animate-slide-up"
               style={{ animationDelay: "0.1s" }}
             >
-              <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent drop-shadow-sm">
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent drop-shadow-sm">
                 Decode Cancer Networks
               </span>
               <br />
@@ -44,7 +44,7 @@ export default function Home() {
               <Link href="/upload">
                 <Button
                   size="lg"
-                  className="gap-2 bg-yellow-500 hover:bg-yellow-400 text-black shadow-[0_0_30px_rgba(234,179,8,0.3)] hover:shadow-[0_0_40px_rgba(234,179,8,0.5)] transition-all duration-500 text-base font-bold rounded-xl px-8"
+                  className="gap-2 bg-primary hover:bg-primary/80 text-primary-foreground shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.3))] hover:shadow-[0_0_40px_var(--primary-hex,rgba(139,92,246,0.5))] transition-all duration-500 text-base font-bold rounded-xl px-8"
                 >
                   Start Analysis <ArrowRight className="w-4 h-4" />
                 </Button>
@@ -53,7 +53,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="shadow-md hover:shadow-lg transition-all duration-500 text-base font-semibold bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-yellow-400/50 rounded-xl px-8"
+                  className="shadow-md hover:shadow-lg transition-all duration-500 text-base font-semibold bg-white/5 border-white/20 text-white hover:bg-white/10 hover:border-primary/50 rounded-xl px-8"
                 >
                   Learn Our Approach
                 </Button>
@@ -80,12 +80,12 @@ export default function Home() {
               ].map((feature, idx) => (
                 <Card
                   key={idx}
-                  className="glass-card border-white/5 hover:border-yellow-400/30 hover:bg-white/10 transition-all duration-500 hover:scale-105 group animate-scale-in"
+                  className="glass-card border-white/5 hover:border-primary/30 hover:bg-white/10 transition-all duration-500 hover:scale-105 group animate-scale-in"
                   style={{ animationDelay: `${0.4 + idx * 0.1}s` }}
                 >
                   <CardHeader>
-                    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-500/20 transition-all duration-500 border border-white/10">
-                      <feature.icon className="w-6 h-6 text-yellow-500" />
+                    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-all duration-500 border border-white/10">
+                      <feature.icon className="w-6 h-6 text-primary" />
                     </div>
                     <CardTitle className="text-lg text-white font-bold tracking-tight">{feature.title}</CardTitle>
                   </CardHeader>
@@ -144,12 +144,12 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="flex gap-4 p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-yellow-400/30 hover:shadow-[0_0_30px_rgba(234,179,8,0.05)] transition-all duration-500 animate-slide-up group"
+                className="flex gap-4 p-8 rounded-2xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-primary/30 hover:shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.05))] transition-all duration-500 animate-slide-up group"
                 style={{ animationDelay: `${idx * 0.05}s` }}
               >
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/5 group-hover:bg-yellow-500/20 transition-all duration-500 border border-white/10">
-                    <feature.icon className="h-7 w-7 text-yellow-500" />
+                  <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-white/5 group-hover:bg-primary/20 transition-all duration-500 border border-white/10">
+                    <feature.icon className="h-7 w-7 text-primary" />
                   </div>
                 </div>
                 <div className="text-left">
@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-4 py-32 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-yellow-500/5 backdrop-blur-sm border-t border-white/5">
+      <section className="px-4 py-32 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-primary/5 backdrop-blur-sm border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-extrabold text-white mb-6 animate-slide-up tracking-tight">Ready to Analyze Cancer Networks?</h2>
           <p className="text-xl text-white/50 mb-12 animate-slide-up font-light" style={{ animationDelay: "0.1s" }}>
@@ -173,7 +173,7 @@ export default function Home() {
           <Link href="/upload" className="inline-block animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Button
               size="lg"
-              className="gap-3 bg-yellow-500 hover:bg-yellow-400 text-black shadow-[0_0_50px_rgba(234,179,8,0.2)] hover:shadow-[0_0_60px_rgba(234,179,8,0.4)] transition-all duration-500 text-lg font-bold rounded-xl px-12 py-7"
+              className="gap-3 bg-primary hover:bg-primary/80 text-primary-foreground shadow-[0_0_50px_var(--primary-hex,rgba(139,92,246,0.2))] hover:shadow-[0_0_60px_var(--primary-hex,rgba(139,92,246,0.4))] transition-all duration-500 text-lg font-bold rounded-xl px-12 py-7"
             >
               Begin Analysis <ArrowRight className="w-5 h-5" />
             </Button>
@@ -186,25 +186,25 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div>
-              <h4 className="font-bold mb-6 text-yellow-500 tracking-tight">Research</h4>
+              <h4 className="font-bold mb-6 text-primary tracking-tight">Research</h4>
               <ul className="space-y-3 text-sm text-white/40">
                 <li>
-                  <Link href="/methodology" className="hover:text-yellow-400 transition-colors duration-300 font-light">
+                  <Link href="/methodology" className="hover:text-primary transition-colors duration-300 font-light">
                     Methodology
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-yellow-400 transition-colors duration-300 font-light">
+                  <Link href="#" className="hover:text-primary transition-colors duration-300 font-light">
                     Publications
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-yellow-500 tracking-tight">Platform</h4>
+              <h4 className="font-bold mb-6 text-primary tracking-tight">Platform</h4>
               <ul className="space-y-3 text-sm text-white/40">
                 <li>
-                  <Link href="/upload" className="hover:text-yellow-400 transition-colors duration-300 font-light">
+                  <Link href="/upload" className="hover:text-primary transition-colors duration-300 font-light">
                     Upload Data
                   </Link>
                 </li>
@@ -216,7 +216,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-yellow-500 tracking-tight">Resources</h4>
+              <h4 className="font-bold mb-6 text-primary tracking-tight">Resources</h4>
               <ul className="space-y-3 text-sm text-white/40">
                 <li>
                   <Link href="#" className="hover:text-yellow-400 transition-colors duration-300 font-light">
@@ -231,7 +231,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h4 className="font-bold mb-6 text-yellow-500 tracking-tight">Connect</h4>
+              <h4 className="font-bold mb-6 text-primary tracking-tight">Connect</h4>
               <ul className="space-y-3 text-sm text-white/40">
                 <li>
                   <Link href="#" className="hover:text-yellow-400 transition-colors duration-300 font-light">

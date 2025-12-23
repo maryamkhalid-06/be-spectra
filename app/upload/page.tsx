@@ -68,7 +68,7 @@ export default function UploadPage() {
 
         <div className="mb-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-8 text-center md:text-left">
           <div>
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight">
               Analyze Cancer Networks
             </h1>
             <p className="text-xl text-white/50 max-w-2xl font-light leading-relaxed">
@@ -80,9 +80,9 @@ export default function UploadPage() {
             variant="outline"
             size="lg"
             onClick={() => setModelInfoOpen(true)}
-            className="gap-3 bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-yellow-400/50 rounded-xl px-8 transition-all duration-500"
+            className="gap-3 bg-white/5 border-white/10 text-white hover:bg-white/10 hover:border-primary/50 rounded-xl px-8 transition-all duration-500"
           >
-            <Info className="w-5 h-5 text-yellow-500" />
+            <Info className="w-5 h-5 text-primary" />
             Model Specs
           </Button>
         </div>
@@ -90,7 +90,7 @@ export default function UploadPage() {
         <div className="grid lg:grid-cols-3 gap-12 mb-20">
           <div className="lg:col-span-1">
             <Card className="glass-card border-white/5 sticky top-28 overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-pink-500" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
               <CardHeader className="pt-10">
                 <h2 className="text-2xl font-black text-white tracking-tight">Upload Engine</h2>
                 <p className="text-white/30 text-xs uppercase tracking-widest mt-1">Ready for data ingestion</p>
@@ -111,11 +111,11 @@ export default function UploadPage() {
         {!analysisData && (
           <div className="space-y-12">
             {/* Information Card */}
-            <div className="p-10 glass-card border-yellow-500/20 bg-yellow-500/5 rounded-3xl relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 blur-[100px] -mr-32 -mt-32" />
+            <div className="p-10 glass-card border-primary/20 bg-primary/5 rounded-3xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -mr-32 -mt-32" />
               <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-yellow-500/20 flex items-center justify-center border border-yellow-500/30 flex-shrink-0">
-                  <Info className="w-8 h-8 text-yellow-500" />
+                <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center border border-primary/30 flex-shrink-0">
+                  <Info className="w-8 h-8 text-primary" />
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="font-extrabold text-2xl text-white mb-3 tracking-tight">Strategic Insights Await</h3>
@@ -127,7 +127,7 @@ export default function UploadPage() {
                     variant="ghost"
                     size="sm"
                     onClick={() => setModelInfoOpen(true)}
-                    className="text-yellow-500 hover:bg-yellow-500/10 font-bold uppercase tracking-widest text-[10px]"
+                    className="text-primary hover:bg-primary/10 font-bold uppercase tracking-widest text-[10px]"
                   >
                     View Model Architecture
                   </Button>
@@ -138,7 +138,7 @@ export default function UploadPage() {
             {/* Data Format Requirements */}
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="glass-card border-white/5 p-8 rounded-3xl">
-                <h4 className="font-black text-yellow-500 mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl">
+                <h4 className="font-black text-primary mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl">
                   <Network className="w-6 h-6" />
                   PPI Configuration
                 </h4>
@@ -151,7 +151,7 @@ EGFR,SOS1,0.92,HI-III`}
               </Card>
 
               <Card className="glass-card border-white/5 p-8 rounded-3xl">
-                <h4 className="font-black text-pink-500 mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl">
+                <h4 className="font-black text-secondary mb-6 flex items-center gap-3 uppercase tracking-tighter text-xl">
                   <BarChart3 className="w-6 h-6" />
                   Expression Matrix
                 </h4>

@@ -27,9 +27,9 @@ function Navigation() {
                         className: "flex items-center gap-3 group",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-yellow-500/20 transition-all duration-500 shadow-lg",
+                                className: "w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-primary/20 transition-all duration-500 shadow-lg",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
-                                    className: "w-6 h-6 text-yellow-500"
+                                    className: "w-6 h-6 text-primary"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
                                     lineNumber: 12,
@@ -41,7 +41,7 @@ function Navigation() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "hidden sm:inline bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent font-extrabold text-xl tracking-tight",
+                                className: "hidden sm:inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-extrabold text-xl tracking-tight",
                                 children: "BE Spectra"
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation.tsx",
@@ -78,7 +78,7 @@ function Navigation() {
                                     }
                                 ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
-                                        className: "text-sm font-medium text-white/50 hover:text-yellow-400 transition-all duration-300 tracking-wide",
+                                        className: "text-sm font-medium text-white/50 hover:text-primary transition-all duration-300 tracking-wide",
                                         children: item.name
                                     }, item.name, false, {
                                         fileName: "[project]/components/navigation.tsx",
@@ -94,7 +94,7 @@ function Navigation() {
                                 href: "/upload",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                     size: "sm",
-                                    className: "bg-yellow-500 hover:bg-yellow-400 text-black font-bold shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-500 rounded-lg px-6",
+                                    className: "bg-primary hover:bg-primary/80 text-primary-foreground font-bold shadow-[0_0_20px_var(--primary-hex,rgba(139,92,246,0.2))] hover:shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.4))] transition-all duration-500 rounded-lg px-6",
                                     children: "Get Started"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navigation.tsx",
@@ -4005,7 +4005,7 @@ function ModelsPage() {
                         className: "mb-20 text-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight",
+                                className: "text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight",
                                 children: "Advanced AI Models"
                             }, void 0, false, {
                                 fileName: "[project]/app/models/page.tsx",
@@ -4071,9 +4071,9 @@ function ModelsPage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-yellow-500/20 px-4 py-2 rounded-full border border-yellow-500/30",
+                                            className: "bg-primary/20 px-4 py-2 rounded-full border border-primary/30",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-yellow-500 text-xs font-bold uppercase tracking-widest",
+                                                className: "text-primary text-xs font-bold uppercase tracking-widest",
                                                 children: "Active Model"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/models/page.tsx",
@@ -4109,7 +4109,7 @@ function ModelsPage() {
                                                         className: "text-xl font-bold text-white mb-6 flex items-center gap-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "w-8 h-1 bg-yellow-500 rounded-full"
+                                                                className: "w-8 h-1 bg-primary rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/models/page.tsx",
                                                                 lineNumber: 52,
@@ -4129,13 +4129,13 @@ function ModelsPage() {
                                                                 n: 1,
                                                                 t: "Input Layer",
                                                                 d: "Multi-omic features & high-confidence PPI topology (score ≥0.85)",
-                                                                c: "bg-yellow-500"
+                                                                c: "bg-primary"
                                                             },
                                                             {
                                                                 n: 2,
                                                                 t: "GAT Layers (3×)",
                                                                 d: "8-head attention mechanism aggregating neighbor information",
-                                                                c: "bg-pink-500"
+                                                                c: "bg-secondary"
                                                             },
                                                             {
                                                                 n: 3,
@@ -4207,7 +4207,7 @@ function ModelsPage() {
                                                     className: "bg-black/40 rounded-2xl p-8 border border-white/5 h-full flex flex-col justify-center",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                                            className: "font-bold text-yellow-500 text-xs uppercase tracking-widest mb-8 text-center",
+                                                            className: "font-bold text-primary text-xs uppercase tracking-widest mb-8 text-center",
                                                             children: "Benchmark Metrics"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/models/page.tsx",
@@ -4221,7 +4221,7 @@ function ModelsPage() {
                                                                     className: "text-center group",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                            className: "text-white/30 text-[10px] uppercase mb-1 group-hover:text-yellow-500 transition-colors",
+                                                                            className: "text-white/30 text-[10px] uppercase mb-1 group-hover:text-primary transition-colors",
                                                                             children: "Accuracy"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/models/page.tsx",
@@ -4233,7 +4233,7 @@ function ModelsPage() {
                                                                             children: [
                                                                                 "70.6",
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                    className: "text-yellow-500 text-sm",
+                                                                                    className: "text-primary text-sm",
                                                                                     children: "%"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/models/page.tsx",
@@ -4256,7 +4256,7 @@ function ModelsPage() {
                                                                     className: "text-center group",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                            className: "text-white/30 text-[10px] uppercase mb-1 group-hover:text-pink-500 transition-colors",
+                                                                            className: "text-white/30 text-[10px] uppercase mb-1 group-hover:text-secondary transition-colors",
                                                                             children: "ROC-AUC"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/models/page.tsx",

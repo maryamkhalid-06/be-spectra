@@ -8,10 +8,10 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-yellow-500/20 transition-all duration-500 shadow-lg">
-              <Sparkles className="w-6 h-6 text-yellow-500" />
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-primary/20 transition-all duration-500 shadow-lg">
+              <Sparkles className="w-6 h-6 text-primary" />
             </div>
-            <span className="hidden sm:inline bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent font-extrabold text-xl tracking-tight">
+            <span className="hidden sm:inline bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-extrabold text-xl tracking-tight">
               BE Spectra
             </span>
           </Link>
@@ -27,7 +27,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-white/50 hover:text-yellow-400 transition-all duration-300 tracking-wide"
+                  className="text-sm font-medium text-white/50 hover:text-primary transition-all duration-300 tracking-wide"
                 >
                   {item.name}
                 </Link>
@@ -36,7 +36,7 @@ export default function Navigation() {
             <Link href="/upload">
               <Button
                 size="sm"
-                className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-500 rounded-lg px-6"
+                className="bg-primary hover:bg-primary/80 text-primary-foreground font-bold shadow-[0_0_20px_var(--primary-hex,rgba(139,92,246,0.2))] hover:shadow-[0_0_30px_var(--primary-hex,rgba(139,92,246,0.4))] transition-all duration-500 rounded-lg px-6"
               >
                 Get Started
               </Button>

@@ -34,7 +34,7 @@ export default function Methodology() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="mb-16 text-center">
-          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-400 bg-clip-text text-transparent tracking-tight">
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent tracking-tight">
             Spectral Graph Theory & GNNs
           </h1>
           <p className="text-xl text-white/50 font-light leading-relaxed">
@@ -49,28 +49,28 @@ export default function Methodology() {
               <CardTitle className="text-2xl text-white font-bold tracking-tight">1. Network Construction & Data Integration</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 pt-8">
-              <p className="font-bold text-yellow-500 uppercase tracking-widest text-xs">Protein-Protein Interaction Network</p>
+              <p className="font-bold text-primary uppercase tracking-widest text-xs">Protein-Protein Interaction Network</p>
               <ul className="space-y-4 text-white/60">
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                   <span><strong className="text-white">Total Genes:</strong> {totalGenes} nodes</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                   <span><strong className="text-white">Interactions:</strong> {interactions} edges</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                   <span><strong className="text-white">Data Sources:</strong> {dataSources}</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-yellow-500 rounded-full" />
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                   <span><strong className="text-white">Features per gene:</strong> {featuresPerGene} multi-omic features</span>
                 </li>
               </ul>
-              <div className="bg-yellow-500/10 p-4 rounded-xl border border-yellow-500/20">
-                <p className="text-sm text-yellow-500 font-medium">
-                  <strong className="text-yellow-400">Class Imbalance:</strong> {classImbalance}
+              <div className="bg-primary/10 p-4 rounded-xl border border-primary/20">
+                <p className="text-sm text-primary font-medium">
+                  <strong className="text-primary">Class Imbalance:</strong> {classImbalance}
                 </p>
               </div>
             </CardContent>
@@ -88,11 +88,11 @@ export default function Methodology() {
                   <p className="text-sm font-mono text-white/80 bg-white/5 p-4 rounded-lg border border-white/10">{spectralCentralityFormula}</p>
                 </div>
                 <div className="bg-black/40 p-6 rounded-2xl border border-white/5">
-                  <p className="font-bold text-pink-400 text-xs uppercase tracking-widest mb-4">Key Properties</p>
+                  <p className="font-bold text-secondary text-xs uppercase tracking-widest mb-4">Key Properties</p>
                   <ul className="text-sm text-white/50 space-y-3">
                     {keyProperties.map((property, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <span className="w-1 h-1 bg-pink-500 rounded-full" />
+                        <span className="w-1 h-1 bg-secondary rounded-full" />
                         {property}
                       </li>
                     ))}
@@ -144,20 +144,20 @@ export default function Methodology() {
             <CardContent className="space-y-6 pt-8">
               <div className="space-y-4">
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
-                  <p className="text-xs font-bold text-pink-400 uppercase tracking-widest mb-1">Input Data</p>
+                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Input Data</p>
                   <p className="text-white text-sm font-medium">{inputSurvivalData}</p>
                 </div>
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
-                  <p className="text-xs font-bold text-pink-400 uppercase tracking-widest mb-1">Architecture</p>
+                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Architecture</p>
                   <p className="text-white text-sm font-medium">{architectureSurvival}</p>
                 </div>
                 <div className="p-4 rounded-xl bg-black/40 border border-white/5">
-                  <p className="text-xs font-bold text-pink-400 uppercase tracking-widest mb-1">Loss Function</p>
+                  <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Loss Function</p>
                   <p className="text-white text-sm font-medium">{lossFunctionSurvival}</p>
                 </div>
 
-                <div className="bg-pink-500/10 p-6 rounded-2xl border border-pink-500/20 mt-6">
-                  <p className="text-sm font-bold text-pink-400 mb-4 uppercase tracking-widest">Validation Performance (Test Set)</p>
+                <div className="bg-secondary/10 p-6 rounded-2xl border border-secondary/20 mt-6">
+                  <p className="text-sm font-bold text-secondary mb-4 uppercase tracking-widest">Validation Performance (Test Set)</p>
                   <div className="grid grid-cols-3 gap-6">
                     {validationPerformanceSurvival.map((performance, index) => (
                       <div key={index} className="text-center">
@@ -169,7 +169,7 @@ export default function Methodology() {
                 </div>
               </div>
               <p className="text-sm text-white/40 font-light italic mt-6 leading-relaxed">
-                Network topology improves survival prediction by <span className="text-pink-400 font-bold">12%</span> over expression-only models, demonstrating the value of integrating protein interactions.
+                Network topology improves survival prediction by <span className="text-secondary font-bold">12%</span> over expression-only models, demonstrating the value of integrating protein interactions.
               </p>
             </CardContent>
           </Card>
@@ -179,7 +179,7 @@ export default function Methodology() {
               <CardTitle className="text-2xl text-white font-bold tracking-tight">5. Pathway Enrichment & Biological Validation</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 pt-8">
-              <p className="font-bold text-yellow-500 uppercase tracking-widest text-xs">Top Enriched Pathways (FDR &lt; 0.01)</p>
+              <p className="font-bold text-primary uppercase tracking-widest text-xs">Top Enriched Pathways (FDR &lt; 0.01)</p>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-sm font-bold text-blue-400 mb-4">KEGG Pathways</p>
@@ -193,11 +193,11 @@ export default function Methodology() {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-pink-400 mb-4">GO Biological Process</p>
+                  <p className="text-sm font-bold text-secondary mb-4">GO Biological Process</p>
                   <ul className="text-sm text-white/50 space-y-2">
                     {enrichedPathways.go.map((process, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <span className="w-1 h-1 bg-pink-500 rounded-full" />
+                        <span className="w-1 h-1 bg-secondary rounded-full" />
                         {process}
                       </li>
                     ))}
@@ -211,7 +211,7 @@ export default function Methodology() {
             </CardContent>
           </Card>
 
-          <Card className="bg-yellow-500/10 border-yellow-500/20 p-8 rounded-3xl">
+          <Card className="bg-primary/10 border-primary/20 p-8 rounded-3xl">
             <CardHeader className="p-0 mb-4">
               <CardTitle className="text-xl text-white font-extrabold tracking-tight">Clinical Translation</CardTitle>
             </CardHeader>
