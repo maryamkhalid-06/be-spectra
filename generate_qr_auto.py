@@ -15,7 +15,9 @@ from datetime import datetime
 # Change this to your actual tunnel URL
 # Example: "https://abc123.loca.lt" or your localhost.run URL
 
-URL = "https://d341fbaf9f78db45-156-208-65-108.serveousercontent.com"  # Your serveo.net tunnel URL
+# <<< PASTE YOUR VERCEL URL BELOW >>>
+URL = " https://maryam-67yqews4m-maryams-projects-70c18ddc.vercel.app"
+
 
 # ==================================================
 
