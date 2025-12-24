@@ -5,40 +5,52 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Dark Glassmorphic Theme by default */
+  /* Dark Glassmorphic Theme by default - Ocean Depths */
   --background: oklch(0.08 0 0);
   --foreground: oklch(0.95 0 0);
   --card: oklch(0.12 0.02 0 / 0.4);
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.12 0.02 0 / 0.8);
   --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.72 0.25 280);
+
+  /* Ocean Depths Colors */
+  --primary: oklch(0.623 0.188 259.879);
+  /* #3b82f6 */
   --primary-foreground: oklch(0.95 0 0);
-  --secondary: oklch(0.8 0.2 330);
+  --secondary: oklch(0.718 0.158 217.368);
+  /* #06b6d4 */
   --secondary-foreground: oklch(0.95 0 0);
+  --accent: oklch(0.686 0.165 233.197);
+  /* #0ea5e9 */
+  --accent-foreground: oklch(0.95 0 0);
+
+  --primary-hex: #3b82f6;
+  --secondary-hex: #06b6d4;
+  --accent-hex: #0ea5e9;
+
   --muted: oklch(0.25 0 0);
   --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.72 0.25 280);
-  --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.95 0 0);
   --border: oklch(0.2 0 0 / 0.3);
   --input: oklch(0.15 0 0 / 0.5);
-  --ring: oklch(0.72 0.25 280);
-  --chart-1: oklch(0.72 0.25 280);
-  --chart-2: oklch(0.8 0.2 330);
-  --chart-3: oklch(0.65 0.22 40);
+  --ring: oklch(0.623 0.188 259.879);
+
+  --chart-1: oklch(0.623 0.188 259.879);
+  --chart-2: oklch(0.718 0.158 217.368);
+  --chart-3: oklch(0.686 0.165 233.197);
   --chart-4: oklch(0.78 0.21 350);
   --chart-5: oklch(0.6 0.22 60);
+
   --radius: 0.625rem;
   --sidebar: oklch(0.1 0 0 / 0.6);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.72 0.25 280);
+  --sidebar-primary: oklch(0.623 0.188 259.879);
   --sidebar-primary-foreground: oklch(0.95 0 0);
-  --sidebar-accent: oklch(0.8 0.2 330);
+  --sidebar-accent: oklch(0.718 0.158 217.368);
   --sidebar-accent-foreground: oklch(0.95 0 0);
   --sidebar-border: oklch(0.269 0 0 / 0.3);
-  --sidebar-ring: oklch(0.72 0.25 280);
+  --sidebar-ring: oklch(0.623 0.188 259.879);
 }
 
 .dark {
