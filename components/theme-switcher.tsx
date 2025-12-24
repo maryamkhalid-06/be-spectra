@@ -446,7 +446,7 @@ export default function ThemeSwitcher() {
         <div className="fixed bottom-6 right-6 z-50" ref={panelRef}>
             {/* Theme picker panel */}
             <div
-                className={`absolute bottom-16 right-0 backdrop-blur-2xl bg-black/70 border border-white/10 rounded-2xl p-5 shadow-2xl w-[380px] max-h-[85vh] overflow-y-auto transition-all duration-300 ease-out ${isOpen
+                className={`absolute bottom-16 right-0 backdrop-blur-2xl bg-black/70 border border-white/10 rounded-2xl p-5 shadow-2xl w-[calc(100vw-3rem)] sm:w-[380px] max-h-[85vh] overflow-y-auto transition-all duration-300 ease-out ${isOpen
                     ? 'opacity-100 translate-y-0 pointer-events-auto'
                     : 'opacity-0 translate-y-4 pointer-events-none'
                     }`}
@@ -488,25 +488,37 @@ export default function ThemeSwitcher() {
                         </Button>
                     </div>
 
-                    {/* Background Style Selection */}
+                    {/* Background Style Selection - Icon Only */}
                     <div className="pb-3 border-b border-white/10">
-                        <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center justify-between mb-3">
                             <div className="flex items-center gap-2">
                                 <span className="text-lg">🌌</span>
                                 <span className="text-sm font-bold text-white">Background</span>
                             </div>
                         </div>
-                        <select
-                            value={backgroundTheme}
-                            onChange={(e) => setBackgroundTheme(e.target.value as any)}
-                            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors cursor-pointer"
-                        >
+                        <div className="flex gap-2 justify-between">
                             {(['genes', 'neural', 'lasers', 'medicine'] as const).map((bg) => (
-                                <option key={bg} value={bg} className="bg-gray-900 text-white">
-                                    {bg.charAt(0).toUpperCase() + bg.slice(1)} Style
-                                </option>
+                                <button
+                                    key={bg}
+                                    onClick={() => setBackgroundTheme(bg)}
+                                    className={`p-3 rounded-xl border transition-all duration-300 flex items-center justify-center flex-1 ${backgroundTheme === bg
+                                        ? 'bg-white/20 border-primary shadow-[0_0_15px_rgba(var(--primary),0.3)]'
+                                        : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
+                                        }`}
+                                    title={`${bg.charAt(0).toUpperCase() + bg.slice(1)} Style`}
+                                    style={{
+                                        borderColor: backgroundTheme === bg ? currentTheme.primary : undefined,
+                                        boxShadow: backgroundTheme === bg ? `0 0 10px ${currentTheme.primary}40` : undefined
+                                    }}
+                                >
+                                    {/* Map icons to background types */}
+                                    {bg === 'genes' && <span className="text-xl">🧬</span>}
+                                    {bg === 'neural' && <span className="text-xl">🧠</span>}
+                                    {bg === 'lasers' && <span className="text-xl">⚡</span>}
+                                    {bg === 'medicine' && <span className="text-xl">🏥</span>}
+                                </button>
                             ))}
-                        </select>
+                        </div>
                     </div>
 
                     {/* Intensity Control */}
