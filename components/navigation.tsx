@@ -76,12 +76,12 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/5 space-y-2 animate-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden absolute left-0 right-0 top-full bg-black/95 backdrop-blur-xl border-b border-white/10 py-4 space-y-2 animate-in slide-in-from-top-2 duration-200 z-50">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-3 text-base font-medium text-white/70 hover:text-primary hover:bg-white/5 rounded-lg transition-colors"
+                className="block px-6 py-3 text-base font-medium text-white/70 hover:text-primary hover:bg-white/5 rounded-lg transition-colors mx-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

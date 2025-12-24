@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Navigation from "@/components/navigation"
-import DataUploadForm from "@/components/data-upload-form"
+import DataUploadForm, { AnalysisOptions } from "@/components/data-upload-form"
 import AnalysisResults from "@/components/analysis-results"
 import QRCodeDisplay from "@/components/qr-code-display"
 import ModelInfoModal from "@/components/model-info-modal"
@@ -14,9 +14,11 @@ export default function UploadPage() {
   const [analysisData, setAnalysisData] = useState<any>(null)
   const [loading, setLoading] = useState(false)
   const [modelInfoOpen, setModelInfoOpen] = useState(false)
+  const [selectedOptions, setSelectedOptions] = useState<AnalysisOptions | null>(null)
 
-  const handleFileUpload = async (file: File) => {
+  const handleFileUpload = async (file: File, options: AnalysisOptions) => {
     setLoading(true)
+    setSelectedOptions(options)
     try {
       await new Promise((resolve) => setTimeout(resolve, 2500))
 
@@ -88,9 +90,10 @@ export default function UploadPage() {
           </Button>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 mb-20">
-          <div className="lg:col-span-1">
-            <Card className="glass-card border-white/5 sticky top-28 overflow-hidden">
+
+        <div className={`grid gap-12 mb-20 ${analysisData ? 'lg:grid-cols-3' : 'grid-cols-1'}`}>
+          <div className={analysisData ? 'lg:col-span-1' : 'col-span-1 max-w-2xl mx-auto w-full'}>
+            <Card className="glass-card border-white/5 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary" />
               <CardHeader className="pt-10">
                 <h2 className="text-2xl font-black text-white tracking-tight">Upload Engine</h2>
@@ -104,7 +107,7 @@ export default function UploadPage() {
 
           {analysisData && (
             <div className="lg:col-span-2 space-y-8 animate-slide-up">
-              <AnalysisResults data={analysisData} />
+              <AnalysisResults data={analysisData} selectedOptions={selectedOptions} />
               <QRCodeDisplay title="Share Analysis Results" />
             </div>
           )}

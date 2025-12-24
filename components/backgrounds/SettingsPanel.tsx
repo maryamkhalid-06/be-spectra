@@ -27,14 +27,19 @@ export default function SettingsPanel() {
     };
 
     return (
-        <div className="fixed top-24 right-6 z-50 w-72">
+        <div className="fixed top-24 right-4 lg:right-6 z-40 w-auto lg:w-72">
             {/* Toggle button when closed */}
             {!isOpen && (
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="w-full p-4 bg-black/40 backdrop-blur-2xl rounded-2xl border border-white/10 shadow-2xl hover:border-white/20 transition-all duration-300 hover:scale-105"
+                    className="p-3 lg:p-4 lg:w-full bg-black/40 backdrop-blur-2xl rounded-full lg:rounded-2xl border border-white/10 shadow-2xl hover:border-white/20 transition-all duration-300 hover:scale-105"
                 >
-                    <div className="flex items-center justify-between">
+                    {/* Mobile/Tablet: Icon only */}
+                    <div className="lg:hidden flex items-center justify-center">
+                        <Settings2 className="w-5 h-5 text-white/70" />
+                    </div>
+                    {/* Desktop: Full button with text */}
+                    <div className="hidden lg:flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <div className="p-2 bg-white/5 rounded-xl border border-white/10">
                                 <Settings2 className="w-4 h-4 text-white/70" />
@@ -48,7 +53,7 @@ export default function SettingsPanel() {
 
             {/* Expanded panel */}
             {isOpen && (
-                <div className="relative p-6 bg-black/40 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl transition-all duration-500">
+                <div className="fixed right-4 lg:right-6 top-24 w-[calc(100vw-2rem)] max-w-[280px] lg:w-72 p-5 lg:p-6 bg-black/40 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl transition-all duration-500">
                     {/* Header with close button */}
                     <div className="flex items-center justify-between mb-8">
                         <div className="flex items-center gap-3">

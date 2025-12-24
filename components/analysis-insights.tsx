@@ -3,12 +3,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AlertCircle, TrendingUp, Brain, Zap } from "lucide-react"
+import { AnalysisOptions } from "@/components/data-upload-form"
 
 interface AnalysisInsightsProps {
   data: any
+  selectedOptions: AnalysisOptions | null
 }
 
-export default function AnalysisInsights({ data }: AnalysisInsightsProps) {
+export default function AnalysisInsights({ data, selectedOptions }: AnalysisInsightsProps) {
+  // Default to showing all if no options provided
+  const showNetwork = selectedOptions?.networkAnalysis ?? true
+  const showCancerDriver = selectedOptions?.cancerDriver ?? true
+  const showPathway = selectedOptions?.pathwayEnrichment ?? true
+  const showSurvival = selectedOptions?.survivalPrediction ?? false
+
   return (
     <div className="space-y-6">
       {/* Main Analysis Summary */}
@@ -37,45 +45,55 @@ export default function AnalysisInsights({ data }: AnalysisInsightsProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 rounded-lg bg-gradient-to-br from-red-50 to-pink-50 border border-red-200">
-              <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-bold text-red-900 mb-1">Cancer Driver Genes Identified</h4>
-                  <p className="text-sm text-red-800">
-                    {data.topGenes?.length || 5} critical genes identified with high centrality in the network. TP53 and
-                    BRCA1 show highest predictive power (confidence &gt; 90%).
-                  </p>
+            {/* Cancer Driver Genes - show when cancerDriver is selected */}
+            {showCancerDriver && (
+              <div className="p-4 rounded-lg bg-gradient-to-br from-red-50 to-pink-50 border border-red-200">
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-red-900 mb-1">Cancer Driver Genes Identified</h4>
+                    <p className="text-sm text-red-800">
+                      {data.topGenes?.length || 5} critical genes identified with high centrality in the network. TP53 and
+                      BRCA1 show highest predictive power (confidence &gt; 90%).
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
-            <div className="p-4 rounded-lg bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-200">
-              <div className="flex items-start gap-3">
-                <TrendingUp className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-bold text-amber-900 mb-1">Network Properties</h4>
-                  <p className="text-sm text-amber-800">
-                    High clustering coefficient ({data.networkStats?.clustering}) indicates functional modules. Average
-                    degree {data.networkStats?.avgDegree} shows moderate connectivity.
-                  </p>
+            {/* Network Properties - show when networkAnalysis is selected */}
+            {showNetwork && (
+              <div className="p-4 rounded-lg bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-200">
+                <div className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-amber-900 mb-1">Network Properties</h4>
+                    <p className="text-sm text-amber-800">
+                      High clustering coefficient ({data.networkStats?.clustering}) indicates functional modules. Average
+                      degree {data.networkStats?.avgDegree} shows moderate connectivity.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
-            <div className="p-4 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200">
-              <div className="flex items-start gap-3">
-                <Zap className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-bold text-green-900 mb-1">Survival Stratification</h4>
-                  <p className="text-sm text-green-800">
-                    Clear divergence between risk groups (p &lt; 0.001). 48-month survival ranges from 18% (high-risk)
-                    to 91% (low-risk).
-                  </p>
+            {/* Survival Stratification - show when survivalPrediction is selected */}
+            {showSurvival && (
+              <div className="p-4 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200">
+                <div className="flex items-start gap-3">
+                  <Zap className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-green-900 mb-1">Survival Stratification</h4>
+                    <p className="text-sm text-green-800">
+                      Clear divergence between risk groups (p &lt; 0.001). 48-month survival ranges from 18% (high-risk)
+                      to 91% (low-risk).
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
+            {/* Model Performance - always show as general info */}
             <div className="p-4 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200">
               <div className="flex items-start gap-3">
                 <Brain className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
